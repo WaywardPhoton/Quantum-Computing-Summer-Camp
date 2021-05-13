@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Double Slit Experiment &#8212; Geering up QC Summer Camp</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Superposition" href="Superposition.html" />
+    <link rel="prev" title="Quantum Bits" href="Day1Qbits.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Geering up QC Summer Camp</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Summary.html">
+   Welcome to Camp!
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Day1.html">
+   Weirdness into Awesomeness
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Day1Bits.html">
+     The information age
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Day1Qbits.html">
+     Quantum Bits
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     The Double Slit Experiment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Superposition.html">
+     Superposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SpkyDst.html">
+     Spooky Action at a Distance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="QObj.html">
+     Quantum Objects in Real Life
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="QNav.html">
+     Quantum Navigator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="WhyQC.html">
+     Why Quantum Computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Scratch.html">
+     Coding with Scratch!
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day2/Day2.html">
+   Day 2
+  </a>
+  <ul class="simple collapse-ul">
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Day1/DblSlit.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay1/DblSlit.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-you-think-the-pattern-on-the-screen-will-look-like">
+   What do you think the pattern on the screen will look like?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-you-think-the-outcome-of-this-experiment-was">
+   What do you think the outcome of this experiment was?
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-double-slit-experiment">
+<h1>The Double Slit Experiment<a class="headerlink" href="#the-double-slit-experiment" title="Permalink to this headline">¶</a></h1>
+<p>Say hello to Bitly, the quantum cat.</p>
+<p><img alt="drawing" src="../_images/bitly.png" /></p>
+<p>Over the next few sections, Bitly will be introcuding you to a wacky, possibly unfamiliar field of physics: <strong>quantum physics</strong>!
+<strong>Classical physics</strong> is the field of physics that describes the movement of large objects, like planets and humans (and cats!). This is the field of physics that had been known to humans for a long time. However, at the start of the 20th century, classical physics was having a lot of trouble explaining the results of some puzzling experiments.</p>
+<p>The rules that applied to large objects –like Newton’s laws to humans– did not make sense when applied to very small objects. A new theory —quantum theory— was developed to explain the behavior of quantum objects such as photons (particles of light), electrons, and other microscopic objects.</p>
+<p>Let’s explore one of these troubling experiments now!</p>
+<p>The first experiment can be compared to Bitly standing in front of an open door: say, the front door leading to the very forbidden <em>outdoors</em>. How would it get through the door, according to the laws of classical physics? Well, chances are it’d just pass right though, straight through the doorway, and come out fully on the other side. Cats may not care much for the laws of people, but they still obey the laws of physics! Scientists wanted to see if light would move through an opening the same way a cat might cross an open doorway.</p>
+<p><img alt="drawing" src="../_images/bitly2.png" /></p>
+<p>Now, let’s exapnd this to an acutal experiment that was done in physics. Replace the cat with a light bulb, and the open doorway with a piece of paper that has two small slits carved into it. Imagine a light bulb shining on two slits in a piece of paper. A black screen is placed behind the slits, so that a scientist can see where the light goes. This is called the “double-slit” experiment.</p>
+<p><img alt="drawing" src="../_images/dblslit1.png" /></p>
+<hr class="docutils" />
+<div class="section" id="what-do-you-think-the-pattern-on-the-screen-will-look-like">
+<h2>What do you think the pattern on the screen will look like?<a class="headerlink" href="#what-do-you-think-the-pattern-on-the-screen-will-look-like" title="Permalink to this headline">¶</a></h2>
+<p>Options:</p>
+<ul class="simple">
+<li><p>Two bright regions on the left and right, where the slits are</p></li>
+<li><p>Bright regions at intervals across the screen</p></li>
+<li><p>A bright spot in the middle of the screen</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>There would be bright regions at intervals across the screen.</p>
+</div>
+<p>You probably thought there would be two bright spots on the left and right of the screen, corresponding to the position of the slits.</p>
+<p>The bright spots should correspond to the location of the slits. This thinking isn’t wrong at all! This is exactly what classical physics predicted. At that time, light was thought to be composed of many small particles, called photons. Scientists thought that a given particle would go through either the left or the right slit. Since millions of these particles in a beam of light would be making this decision every second, the final result should just be two bright spots!</p>
+<p>However, what scientists actually saw was this:</p>
+<p><img alt="" src="../_images/dblslit2.png" /></p>
+<p>This pattern of alternating bright and dark lines is what you would see if light was a <strong>wave</strong>. Just like ripples in a pond, the waves would pass through both slits and interfere with each other, causing peaks (bright spots) and troughs (dark spots) to appear.</p>
+<p>How could light be both a particle and a wave? How could it behave like a particle sometimes, and a wave at others?</p>
+<p>Things got even crazier when the experiment was repeated with a <strong>single photon</strong>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="what-do-you-think-the-outcome-of-this-experiment-was">
+<h2>What do you think the outcome of this experiment was?<a class="headerlink" href="#what-do-you-think-the-outcome-of-this-experiment-was" title="Permalink to this headline">¶</a></h2>
+<p>Options:</p>
+<ul class="simple">
+<li><p>One bright spot on the screen</p></li>
+<li><p>An interference pattern</p></li>
+<li><p>No bright spots</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>An interference pattern would be observed.</p>
+</div>
+<p>According to classical physics, a single particle should go through <em>either</em> the left of the right slit, so there should only be a single bright spot on the screen. But here’s the crazy part—instead, the exact same interference pattern was observed.</p>
+<p>A whole branch of physics, called <strong>quantum mechanics</strong>, had to be invented just to explain this! The only logical explanation is that the photon passes through <strong>both slits</strong> at once, then interferes with itself. This would mean that the single photon was behaving like a wave!
+This interference leads to peaks where the waves build up on each other, and troughs where the waves cancel each other out.
+This idea that the photon can be in multiple places at once is called <strong>superposition</strong>, and it’s a very important principle in quantum physics. The interference of two waves that causes a superposition is shown below.</p>
+<img src="https://ophysics.com/images/pulses.gif"  style="width: 600px;" /><p><em>Cats supposedly enjoy playing with yarn. Sometimes, that yarn comes from a ball, and at other times, it comes from destroying your sweater! Superposition is sort of like a sweater knitting pattern this way: one side of the fabric might look like a knit stitch, and the other like a purl stitch! It’s the superposition of theses stitches that creates the pattern and texture.</em></p>
+<p><img alt="" src="../_images/bitly3.png" /></p>
+<p>Scientists tried to measure the exact location of the photon by placing detectors on each slit. When they did this, they found that the result of the experiment was no longer an interference pattern but a <strong>single</strong> bright spot —almost as if the photon knew it was being measured and decided to behave <strong>classically</strong> just to spite them!</p>
+<p>The idea that the outcome of an experiment can depend on whether or not someone is actively trying to observe it may seem crazy—but it’s a fundamental principle of quantum mechanics.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Day1Qbits.html" title="previous page">Quantum Bits</a>
+    <a class='right-next' id="next-link" href="Superposition.html" title="next page">Superposition</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ana Ciocoiu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
