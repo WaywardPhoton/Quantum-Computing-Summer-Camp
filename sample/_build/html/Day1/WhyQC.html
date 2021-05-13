@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Quantum Computing? &#8212; Geering up QC Summer Camp</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Coding with Scratch!" href="Scratch.html" />
+    <link rel="prev" title="Quantum Navigator" href="QNav.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Geering up QC Summer Camp</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Summary.html">
+   Welcome to Camp!
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Day1.html">
+   Weirdness into Awesomeness
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Day1Bits.html">
+     The information age
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Day1Qbits.html">
+     Quantum Bits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="DblSlit.html">
+     The Double Slit Experiment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Superposition.html">
+     Superposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SpkyDst.html">
+     Spooky Action at a Distance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="QObj.html">
+     Quantum Objects in Real Life
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="QNav.html">
+     Quantum Navigator
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Why Quantum Computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Scratch.html">
+     Coding with Scratch!
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day2/Day2.html">
+   Day 2
+  </a>
+  <ul class="simple collapse-ul">
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Day1/WhyQC.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay1/WhyQC.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-computing-an-industry-of-the-future">
+   Quantum Computing: An Industry of the Future!
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="why-quantum-computing">
+<h1>Why Quantum Computing?<a class="headerlink" href="#why-quantum-computing" title="Permalink to this headline">¶</a></h1>
+<p>I’m willing to bet that most of you have either a smartphone, tablet, laptop, or all three with you right now! By comparison, people ten or fifteen years older than you (such as myself) had a flip phone until high school and likely got their first laptops in college: technology has advanced so much in the last 15-20 years! Everything we have today, from machine learning and AI to ultra-versatile smartphones and the IoT, comes by grace of increased computing power multiplied by increased accessibility.</p>
+<p>Classical computing has historically benefited from yearly exponential increases in processing power: improvements in chip technology have enabled the rapid miniaturization of silicon-based transistors (these are the little electronic switches that make everything work). Commonly known as <strong>Moore’s law</strong>, these processing advancements have enabled the number of transistors in a single chip to double every 2 years.</p>
+<p>This is why, in my lifetime at least, new and more powerful computers have come out every year without fail. Modern silicon-based transistors are now reaching 10-20 nanometers (a nanometer is about the size of a DNA strand!) in diameter, which approaches something called the <strong>quantum limit</strong>. Remember how we discussed that very small objects will start exhibiting quantum weirdness? Well, the <strong>quantum limit</strong> is the threshold at which this begins to occur. Conventional transistor fabrication relies on classical behavior, so this poses a problem when we want to increase computational power the way we have always done: by making things smaller.</p>
+<p>We’re expected to reach the quantum limit in the next decade. This will likely cap conventional computational power. There are many ways scientists are looking to get around this: there have been attempts to create transistors with quantum behaviour (such as single-electron transistors) as well as create mini quantum computers (called quantum annealers) that can solve highly specialized problems efficiently.</p>
+<p>There are problems in materials, science, chemistry, medicine, and finance that are far too complex to solve on classical computers. The hope is that quantum computing will be able to bridge that gap! Some of the things that people hope to explore with the help of quantum computers are:</p>
+<ol class="simple">
+<li><p>Processes connected with protein folding, such as those encountered in Alzheimer’s disease, vaccine development, and crop improvement research.</p></li>
+<li><p>Accurate risk modelling for the global economy, something that banks cannot currently do because data sets are too large to process efficiently</p></li>
+<li><p>New algorithms to improve Artificial Intelligence technologies</p></li>
+<li><p>Rapid and personalized drug design for cancer through optimization algorithms</p></li>
+</ol>
+<p><img alt="" src="../_images/IBM.png" /></p>
+<p><em>One of IBM’s superconducting quantum computers</em></p>
+<p>Let’s get some terminology out of the way. There are many steps between a classical computer an a universal quantum computer, which is a computer capable of tackling any problem given to it with the <strong>full power</strong> of quantum superposition states. Universal quantum computing is still a distant goal. Meanwhile, companies such as IBM and Google are investing billions of dollars into building a quantum computer capable of outperforming a classical one—that is, demonstrating <a class="reference external" href="https://newsroom.ibm.com/5-Things-About-IBM-Roadmap-to-Scale-Quantum-Technology">quantum supremacy</a>.</p>
+<p>IBM’s latest quantum computer contains 65 qubits, which is quite a lot —mathematicians believe that a computer with <a class="reference external" href="https://spectrum.ieee.org/tech-talk/computing/hardware/qubit-supremacy">300</a> qubits could perform more simultaneous calculations than there are atoms in the universe! It is not known with certainty how many qubits are needed to build a computer capable of remonstrating quantum supremacy. It’s a very tricky thing to do, and the race is cutthroat—just last year, Google hastily announced that it had achieved this only to be <a class="reference external" href="https://spectrum.ieee.org/tech-talk/computing/hardware/qubit-supremacy">disputed by IBM researchers</a> almost immediately.</p>
+<p>In fact, you will be running some simulations of quantum circuits on one of IBM’s quantum computers as part of this camp!</p>
+<p>Quantum objects are extremely sensitive to environmental influence. The superposition states that are so critical for quantum computers are also extremely sensitive. Any interaction with the environment will cause the state to change irreversibly. This poses a problem for storing or transmitting quantum information reliably. Quantum circuits today are extremely <em>noisy</em>, which makes calculations very prone to errors. Quantum error correction is the process of identifying and fixing these errors. It is the difference between “a $100 million, 10,000-qubit quantum computer being a random noise generator or the most powerful computer in the world,”  according to the founder of quantum computing company <a class="reference external" href="https://www.sciencemag.org/news/2020/07/biggest-flipping-challenge-quantum-computing">Rigetti</a>.</p>
+<p>In a classical computer, errors are traditionally fixed by a process called <em>encoding</em>, in which a state is copied and transmitted alongside these copies of itself. The copying makes it harder for errors to propagate. Since quantum states can’t be copied, this poses a problem. The approach to correcting errors has to be tweaked!</p>
+<p>Quantum error correction is a very complicated, ever-evolving field. The current approach involves entangling multiple qubits together, then applying special algorithms to find and fix specific errors. Since manipulating individual qubits can introduce errors, unless that error rate falls below a certain level, then entangling more qubits with the original one only adds more noise to the system. The threshold for error is extremely low for quantum computing to work—an error of lower than 1% is barely acceptable.</p>
+<p>This is a very exciting, very tot hopic in quantum computing right now! It’s the next generation of engineers and mathematicians that will likely make the most progress in this field.
+<br>
+<br>
+<img alt="" src="../_images/QEC.png" />
+<em>An artist’s depiction of quantum error correction.</em></p>
+<div class="section" id="quantum-computing-an-industry-of-the-future">
+<h2>Quantum Computing: An Industry of the Future!<a class="headerlink" href="#quantum-computing-an-industry-of-the-future" title="Permalink to this headline">¶</a></h2>
+<p>While we don’t have a fully equipped quantum computer available to us yet, there are many people who are working hard to solve this problem.
+<br>
+<br>
+<img alt="" src="../_images/researchers.png" /></p>
+<p><em>L-R: Dr. Talia Gershon (IBM), Dr. Robert Raussendorf (UBC) and Jessica Pointing (Harvard) are all highly impactful contributors in quantum computing!</em></p>
+<p>Click <a class="reference external" href="https://www.ibm.com/blogs/research/2020/03/women-in-ibm-research-quantum/">here</a> to learn more about some groundbreaking researchers in the field today!</p>
+<p>There is still lots of work to do, and we need many new people with new ideas to enter the field and help out! There are tons of companies beginning to explore the field of quantum computing. Some of the companies we have here in Canada include:</p>
+<p><img alt="" src="../_images/companies.png" /></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="QNav.html" title="previous page">Quantum Navigator</a>
+    <a class='right-next' id="next-link" href="Scratch.html" title="next page">Coding with Scratch!</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ana Ciocoiu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
