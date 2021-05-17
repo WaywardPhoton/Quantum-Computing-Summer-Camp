@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stern-Gerlach Simulator &#8212; Geering up QC Summer Camp</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Quantum Circuits" href="QuantumCircuits.html" />
+    <link rel="prev" title="Superposition Vectors (High School Content)" href="Sup_Vectors.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Geering up QC Summer Camp</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Summary.html">
+   Welcome to Camp!
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day1/Day1.html">
+   Weirdness into Awesomeness
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Bits.html">
+     The information age
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Qbits.html">
+     Quantum Bits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/DblSlit.html">
+     The Double Slit Experiment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Superposition.html">
+     Superposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/SpkyDst.html">
+     Spooky Action at a Distance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QObj.html">
+     Quantum Objects in Real Life
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QNav.html">
+     Quantum Navigator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/WhyQC.html">
+     Why Quantum Computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Scratch.html">
+     Coding with Scratch!
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Day2.html">
+   Introducing Quantum Information
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Donut.html">
+     Superposition With Donuts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Spin.html">
+     What is Spin?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Sup_Vectors.html">
+     Superposition Vectors (High School Content)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Stern-Gerlach Simulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="QuantumCircuits.html">
+     Quantum Circuits
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Day2/SternGerlach.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay2/SternGerlach.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stern-gerlach-simulator-questions-1">
+   Stern Gerlach Simulator Questions #1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stern-gerlach-simulator-questions-2">
+   Stern Gerlach Simulator Questions #2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-hints-and-additional-information">
+   Some hints and additional information
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="stern-gerlach-simulator">
+<h1>Stern-Gerlach Simulator<a class="headerlink" href="#stern-gerlach-simulator" title="Permalink to this headline">¶</a></h1>
+<p>For this activity, we’re going to make use of a simulator. You can see the simulator by clicking the link <a class="reference external" href="https://scratch.mit.edu/projects/412179979/">here</a>.</p>
+<p>Let’s start out by getting to know the components of the simulator.</p>
+<ul class="simple">
+<li><p>The <strong>source</strong>. This is a box which will shoot particles with certain spins out. The spin state of a single particle can be used to create a qubit, like we discussed in the last section. The qubits can have a state that is <span class="math notranslate nohighlight">\(\rightarrow\;\)</span> , <span class="math notranslate nohighlight">\(\leftarrow\;\)</span>, <span class="math notranslate nohighlight">\(|0\rangle\)</span> or <span class="math notranslate nohighlight">\(|1\rangle\)</span>.</p></li>
+</ul>
+<p><img alt="" src="../_images/source.png" /></p>
+<br>
+<ul class="simple">
+<li><p>A <strong>magnet</strong>. Particles will go in one end and come out one of two ends, corresponding to ‘spin up’ (red) or ‘spin down’ (blue). You can turn the magnet using the button to its left. Start out with the magnet set straight up and down. Clicking on the magnets will show or hide the percent of qubits that went each direction through the magnet.</p></li>
+</ul>
+<p><img alt="" src="../_images/magnet.png" /></p>
+<br>
+<ul class="simple">
+<li><p>A yellow <strong>blocker</strong> is placed at the exit point so that you can control which set of spins you want to keep. You can switch the blocker position by selecting “up” or “down” in the top menu.</p></li>
+</ul>
+<p><img alt="" src="../_images/blockder.png" /></p>
+<br>
+<p>Try and address the questions in the next parts together as a group. However, each group member can submit their responses separately.</p>
+<div class="section" id="stern-gerlach-simulator-questions-1">
+<h2>Stern Gerlach Simulator Questions #1<a class="headerlink" href="#stern-gerlach-simulator-questions-1" title="Permalink to this headline">¶</a></h2>
+<p>Set the simulator so that the source creates up qubits, and the magnet is in the vertical position like the picture below. Then, use the “Send qubit” button to send in some qubits.</p>
+<p><img alt="" src="../_images/prompt1.png" /></p>
+<ul class="simple">
+<li><p>What percentage of the time does the qubit come out the “up” exit of the magnet?</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>100%</p>
+</div>
+<p>Now set the source to produce down qubits, leaving everything else unchanged.</p>
+<ul class="simple">
+<li><p>Now which percentage of spins come out of the up exit on the magnet?</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>0%.</p>
+</div>
+<p>You might notice the statistics being displayed at the output of the magnet. This is because we are making a <em>measurement</em> on the particles that come out of the magnet.</p>
+<p>We noticed that:</p>
+<ul class="simple">
+<li><p>An up spin, when you check if it’s up or down, will turn out to be up 100% of the time.</p></li>
+<li><p>A down spin, when you check if it’s up or down, will turn out to be down 100% of the time.</p></li>
+</ul>
+<p>So far so good? Prepare for things to get a bit stranger in the next section!</p>
+</div>
+<div class="section" id="stern-gerlach-simulator-questions-2">
+<h2>Stern Gerlach Simulator Questions #2<a class="headerlink" href="#stern-gerlach-simulator-questions-2" title="Permalink to this headline">¶</a></h2>
+<p>We’re now ready to add a few more ingredients to our understanding of Stern-Gerlach. We’ll begin to explore one of the big concepts in the quantum world - randomness.</p>
+<p>Begin by setting your source to create left pointing spins.</p>
+<p><img alt="" src="../_images/LeftSpin.png" /></p>
+<p>Leave your magnet in the up-down position, so that the spins coming out have the option of passing either up or down.</p>
+<ul class="simple">
+<li><p>With what probability does the left spin pass through the up exit of the up-down magnet?</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>50% … A left electron goes up or down when passing through an up-down magnet randomly!</p>
+</div>
+<p>We’ve just seen the effects of measuring a superposition! Remember that a <span class="math notranslate nohighlight">\(\leftarrow\)</span> state is composed of an equal amount of and <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> states. So it makes sense that after repeated measurements, we will see that a measurement of with respect to the <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> (the up and down states) states should come up as one or the other 50% of the time. This exactly like the spinning coin at the bottom of an ocean trench that we used to visualize superposition a few days back.</p>
+<img src ="https://cdn.dribbble.com/users/6257/screenshots/3833147/coin.gif" alt="Drawing" style="width: 200px;"/>
+<br>
+<p>When the coin stops spinning, it can land either face up or face down. If you spin enough coins and tally up the results, you’ll find that the outcome for heads or tails is roughly 50-50. This is what you’re seeing in the simulation.</p>
+<p>Next, turn your magnet so it is in the 90 position, so spins coming out have the option of either going left or right. Keep your source producing left spins.</p>
+<ul class="simple">
+<li><p>With what probability does a left spin go left when if passes through a left-right magnet?</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>100%  …
+Just like an up qubit always goes up when it passes through an up-down magnet, a left qubit always goes left when it passes through a left-right magnet!</p>
+</div>
+<p>Now we’re going to up the challenge level, and put in two magnets! Click on the top menu to adjust the number of magnets.</p>
+<p><img alt="" src="../_images/twomagnets.png" /></p>
+<p>Start with a source that is creating a left spin. Set the first magnet to make an up-down measurement, and the second magnet to make a left-right measurement. Now, shoot some spins through. Set both blockers ‘down’.</p>
+<p><img alt="" src="../_images/prompt2.png" /></p>
+<br>
+<ul class="simple">
+<li><p>What percentage of spins will come out the final end of the second magnet? Note: Use both of the statistics from BOTH magnets to figure out the answers.</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>25% … A left spin passing through an up-down measurment will have a 50-50 change of being measured either as up or as down. Since the blockers remove all ‘down’ spins, we only have ‘up’ spins going into the second magnet. Since an up spin measured in the left-right basis will be have a 50% chance of being measured ‘left’, in total there is a 25% chance (1/2 * 1/2 = 1/4) of measuring a spin after the two blockers.</p>
+</div>
+<ul class="simple">
+<li><p>This is a <em>challenge</em> question! Start with a source that is creating a left spin. Then, try to have some of the spins coming out go right when they pass through the second magnet. How can you do this? Why do you think it works?</p></li>
+</ul>
+<p>Once you’ve done this, explore the simulator by trying out different arrangements of magnets and sending in different kinds of spins.</p>
+</div>
+<div class="section" id="some-hints-and-additional-information">
+<h2>Some hints and additional information<a class="headerlink" href="#some-hints-and-additional-information" title="Permalink to this headline">¶</a></h2>
+<p>A video tutorial is <a class="reference external" href="https://youtu.be/WpqeapYFXMg">here</a>.
+Remember that we are thinking about four states a qubit can be in: up, down, left, right, represented as <span class="math notranslate nohighlight">\(|0\rangle\)</span> , <span class="math notranslate nohighlight">\(|1\rangle\)</span>,  <span class="math notranslate nohighlight">\(\leftarrow\;\)</span>, <span class="math notranslate nohighlight">\(\rightarrow\;\)</span>.</p>
+<p><img alt="" src="../_images/spinning.png" /></p>
+<br>
+<p>When we pass a spin through a magnet with a blocker, the spin can go in only one of two directions. The directions it goes in (or tries to go in, but is stopped by the blocker) depends on the result of the <em>quantum measurement</em>. We know that quantum measurement is weird, and that the outcome of a measurement is <em>probabilistic</em>.</p>
+<p>In the simulation there are two different ways of measuring the qubit. Putting the magnet in the vertical position lets you measure if the spin would go up or down (a measurement in the <span class="math notranslate nohighlight">\(|0\rangle\)</span> , <span class="math notranslate nohighlight">\(|1\rangle\)</span>, frame of reference or <em>basis</em>). Putting the magnet in the horizontal position lets you check if the spin would go left or right (a measurement in the <span class="math notranslate nohighlight">\(\leftarrow\;\)</span>, <span class="math notranslate nohighlight">\(\rightarrow\;\)</span> frame of reference or basis).</p>
+<p>We found that an up qubit going through an up-down magnet always is measured <strong>up</strong>, and similarly a left qubit going through a left-right magnet is measured as <strong>left</strong>. However, a left qubit going through an up-down magnet behaves randomly - it has a 50-50 chance of going up or down.</p>
+<p>In the simulation with two magnets, you might have learned that if you send a left qubit into an up-down magnet and it goes up, it will then be an up qubit afterwards. The quantum measurement actually pushes the qubit to be either an up or a down qubit, even though it goes in as a left qubit. This is again something unique to quantum : meaurement changes the <strong>state</strong> of a quantum object.</p>
+<p>What do you think would happen if a third magnet, in the same orientation as the first one, was added?</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Sup_Vectors.html" title="previous page">Superposition Vectors (High School Content)</a>
+    <a class='right-next' id="next-link" href="QuantumCircuits.html" title="next page">Quantum Circuits</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ana Ciocoiu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
