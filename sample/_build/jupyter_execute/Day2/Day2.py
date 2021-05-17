@@ -13,4 +13,8 @@ Today we will be looking at *Quantum Information* : what it is, how it is differ
 
 
 Donut
+Spin
+Sup_Vectors
+SternGerlach
+QuantumCircuits
 ```

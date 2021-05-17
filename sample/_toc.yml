@@ -17,5 +17,9 @@
 - file: Day2/Day2
   sections:
     - file: Day2/Donut
+    - file: Day2/Spin
+    - file: Day2/Sup_Vectors
+    - file: Day2/SternGerlach
+    - file: Day2/QuantumCircuits
 
 

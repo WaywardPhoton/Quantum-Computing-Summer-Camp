@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Circuits &#8212; Geering up QC Summer Camp</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Stern-Gerlach Simulator" href="SternGerlach.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Geering up QC Summer Camp</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Summary.html">
+   Welcome to Camp!
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day1/Day1.html">
+   Weirdness into Awesomeness
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Bits.html">
+     The information age
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Qbits.html">
+     Quantum Bits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/DblSlit.html">
+     The Double Slit Experiment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Superposition.html">
+     Superposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/SpkyDst.html">
+     Spooky Action at a Distance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QObj.html">
+     Quantum Objects in Real Life
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QNav.html">
+     Quantum Navigator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/WhyQC.html">
+     Why Quantum Computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Scratch.html">
+     Coding with Scratch!
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Day2.html">
+   Introducing Quantum Information
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Donut.html">
+     Superposition With Donuts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Spin.html">
+     What is Spin?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Sup_Vectors.html">
+     Superposition Vectors (High School Content)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SternGerlach.html">
+     Stern-Gerlach Simulator
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Quantum Circuits
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Day2/QuantumCircuits.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay2/QuantumCircuits.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-circuits-activity">
+   Quantum Circuits Activity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-1">
+     Challenge 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-2">
+     Challenge 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-3">
+     Challenge 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-4">
+     Challenge 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-5">
+     Challenge 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-6">
+     Challenge 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-7">
+     Challenge 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-8">
+     Challenge 8
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-9">
+     Challenge 9
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-your-own-gate">
+   Make your own gate!
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explore-other-projects">
+     Explore other Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="quantum-circuits">
+<h1>Quantum Circuits<a class="headerlink" href="#quantum-circuits" title="Permalink to this headline">¶</a></h1>
+<p>You’ve learned in the last section about qubits and quantum measurements. You saw how we could use magnets and blockers to do measurements on quantum spins.</p>
+<p>However, what happens if we want to <em>change</em> the spin of a particle? Remember that quantum objects can be used quantum bits, which are used for quantum computation.
+For example, two spin states such as <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> can be used as the quantum version of the 1 and 0 bit states used to transmit information in a classical computer.</p>
+<p>You’ve seen that applying AND, OR, and NOT gates (among others) to classical bits will <em>change</em> the infomration contained. There is a way to manipulate quantum information in a similar way, using <em>quantum gates</em> as part of a <em>quantum circuit</em>.</p>
+<p>There are three parts of a quantum circuit.</p>
+<ul class="simple">
+<li><p>Wires. Wires carry qubits from place to place.</p></li>
+<li><p>Gates. Gates do things to qubits.</p></li>
+<li><p>Measurements. These measure qubits, just like the magnets and blockers in the Stern-Gerlach experiment.</p></li>
+</ul>
+<p>Here is an image of a circuit that measures a qubit in the up-down basis.</p>
+<p><img alt="" src="../_images/updown.png" /></p>
+<br>
+<p>Remember that the state of a qubit can be drawn as an arrow pointing in one direction. In the top left of the animation, we can see that the qubit starts out pointing up. This up state corresponds to the <span class="math notranslate nohighlight">\(\uparrow\)</span> or <span class="math notranslate nohighlight">\(|0\rangle\)</span> that we are familiar with.</p>
+<p>Let’s explore some of the gates that we are going to use as part of this activity. We will be looking at</p>
+<ul class="simple">
+<li><p>X gates</p></li>
+<li><p>H gates</p></li>
+<li><p>Z gates</p></li>
+</ul>
+<p>…and using our knowledge of them to build circuits.</p>
+<ol class="simple">
+<li><p>The X gates is identical to the NOT gates that we saw in classical circuits. Applying a NOT gates to a state will  turn it into its opposite: X applied ot <span class="math notranslate nohighlight">\(|0\rangle\)</span> will transform it into a <span class="math notranslate nohighlight">\(|1\rangle\)</span> state and vice versa.</p></li>
+<li><p>The H gate, when applied to a normal state, will create a <em>superposition</em>: H applied to <span class="math notranslate nohighlight">\(|0\rangle\)</span> will create <span class="math notranslate nohighlight">\(\leftarrow\)</span> and to <span class="math notranslate nohighlight">\(|1\rangle\)</span> will create <span class="math notranslate nohighlight">\(\rightarrow\)</span>.</p></li>
+<li><p>The Z gate is a bit trickier. It does nothing when applied to the <span class="math notranslate nohighlight">\(|0\rangle\)</span> state, but will “shift” the <span class="math notranslate nohighlight">\(|1\rangle\)</span> state so that it becomes -<span class="math notranslate nohighlight">\(|1\rangle\)</span>. You can see the effect of this on a superposition state, such as <span class="math notranslate nohighlight">\(\leftarrow\; = |0 \rangle + |1 \rangle\)</span>. If you apply the Z gate to <span class="math notranslate nohighlight">\(\leftarrow\)</span>, you will get <span class="math notranslate nohighlight">\(|0 \rangle - |1 \rangle\)</span>, which is now the $\rightarrow$ state.</p></li>
+</ol>
+<p>Remember from the Stern-Gerlach experiment that, in some cases, measuring a quantum system gave an unpredictable result. Measuring a <span class="math notranslate nohighlight">\(\leftarrow\)</span> or <span class="math notranslate nohighlight">\(\rightarrow\)</span> state in the up-down basis (measuring in terms of <span class="math notranslate nohighlight">\(|0\rangle\)</span> or <span class="math notranslate nohighlight">\(|1\rangle\)</span> states) will result in a <strong>random</strong> outcome because the left and right states are superpositions of the <span class="math notranslate nohighlight">\(|0\rangle\)</span> or <span class="math notranslate nohighlight">\(|1\rangle\)</span> states. This is like flipping a coin and having it come either heads or tails at any given time.</p>
+<p>In the same way, measuring a <span class="math notranslate nohighlight">\(|0\rangle\)</span> or <span class="math notranslate nohighlight">\(|1\rangle\)</span> state in the left-right basis (measuring in terms of the <span class="math notranslate nohighlight">\(\leftarrow\)</span> or <span class="math notranslate nohighlight">\(\rightarrow\)</span> states) will also have a random outcome, because the <span class="math notranslate nohighlight">\(|0\rangle\)</span> or <span class="math notranslate nohighlight">\(|1\rangle\)</span> states are superpositions of the <span class="math notranslate nohighlight">\(\leftarrow\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span> states.
+This is super weird, so take a second to understand it!</p>
+<p>Also remember that up,down, left, and right don’t mean anything from a physical point of view. An ‘up’ spin is not actually an arrow that points upwards (which is why, when added to a ‘down’ spin, it makes a ‘left’ spin and not <em>nothing</em>). ‘Up’ and ‘down’ are words we used to describe the behavior of spins in the Stern-Gerlach experiment.</p>
+<div class="section" id="quantum-circuits-activity">
+<h2>Quantum Circuits Activity<a class="headerlink" href="#quantum-circuits-activity" title="Permalink to this headline">¶</a></h2>
+<p>In this activity you’ll be exploring quantum circuits in your small groups.</p>
+<p>You’ll use the <a class="reference external" href="https://scratch.mit.edu/projects/412175897/">“One Qubit Circuit”</a> project in Scratch to build your circuits. We’ll give you a series of challenges, which will have you exploring how quantum circuits work.</p>
+<p>Each time you build a circuit that completes a challenge, we’d like you to record your solution into a shared Jamboard. Right now, we’d like one member of the group to make a <a class="reference external" href="https://jamboard.google.com/">Jamboard</a> and share the board with the other small group members.</p>
+<p>You can record your solutions into the Jamboard either by writing the gates that you used, drawing the gates you used, or by taking a screenshot of your working circuit (the screenshot option is easiest on Macs—press command-shift-F4 all at once).</p>
+<hr class="docutils" />
+<p>Complete the challenges and the add your solutions to the Jamboard!</p>
+<div class="section" id="challenge-1">
+<h3>Challenge 1<a class="headerlink" href="#challenge-1" title="Permalink to this headline">¶</a></h3>
+<p>Create a quantum circuit that puts the qubit into each of the 4 states up, left, down, right (in any order). Note that there are lots of correct ways to do this! You can use the hints below if you’d like some help.</p>
+<div class="toggle docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Hint (1 of 3): You can notice that X will get you from up to down.
+Hint (2 of 3): Z switches the state from left to right.
+Hint (3 of 3): H switches the state from being either up or down, to being either left or right.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="challenge-2">
+<h3>Challenge 2<a class="headerlink" href="#challenge-2" title="Permalink to this headline">¶</a></h3>
+<p>Build a circuit and choose a measurement at the end so that the result of the measurement is random.</p>
+<p>This means that when you run the same circuit a few times the measurement at the end will sometimes say “up” and sometimes say “down” OR, sometimes it will say “left” and sometimes say “right”.</p>
+<p>You can use the hints below if you’d like some help.</p>
+<div class="toggle docutils container">
+<p>Hint (1 of 2): Remember that their is more than one kind of measurement, you can use either a left-right measurement or an up-down measurement!
+Hint (2 of 2): Remember from the Stern-Gerlach experiement that an up state going into a left-right magnet gave a random outcome.</p>
+</div>
+</div>
+<div class="section" id="challenge-3">
+<h3>Challenge 3<a class="headerlink" href="#challenge-3" title="Permalink to this headline">¶</a></h3>
+<p>You’ve seen that you can use the quantum gates to change the quantum system (move the arrow). But can you change it back?
+Start your circuit with an X gate. Then, add gates that undo what the X gate did. Qubits going into the circuit should come out unchanged at the end.
+You can use the hints below if you’d like some help.</p>
+<div class="toggle docutils container">
+<p>The X gate flips up to down, and down to up.</p>
+</div>
+</div>
+<div class="section" id="challenge-4">
+<h3>Challenge 4<a class="headerlink" href="#challenge-4" title="Permalink to this headline">¶</a></h3>
+<p>Start your circuit with a Z gate and then an H gate. Then, add gates that undo the Z and H gates. Qubits going into the circuit should come out unchanged at the end. You can use the hints below.</p>
+<div class="toggle docutils container">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Hint (1 of 2): The H gate actually undoes the H gate, and the Z gate undoes the Z gate.
+Hint (2 of 2): The circuit has two gates - Z and then H. To undo them, you should undo H and then undo Z.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="challenge-5">
+<h3>Challenge 5<a class="headerlink" href="#challenge-5" title="Permalink to this headline">¶</a></h3>
+<p>You might have noticed that, starting with an “up” pointing qubit, an X gate will take you to a “down” qubit. But can you do this without ever using an X gate?</p>
+<p>Create a circuit that takes in an “up” state and sends out a “down” state, but, create this circuit without ever using an X gate!
+You can use the hints below.</p>
+<div class="toggle docutils container">
+<p>An H gate takes up to left, and takes right to down.</p>
+</div>
+</div>
+<div class="section" id="challenge-6">
+<h3>Challenge 6<a class="headerlink" href="#challenge-6" title="Permalink to this headline">¶</a></h3>
+<p>If you put an “up” state into an X gate, the state will flip to down. For each gate though there are special states which are not affected by that gate.</p>
+<p>Create a state that the X gate doesn’t do anything to. You’ll need at least one gate before the X gate so that the qubit going into the X gate isn’t in the “up” state!
+You can use the hints below.</p>
+<div class="toggle docutils container">
+<p>Remember that the X gate flips the up arrow to a down arrow, and down to up, so the up and down states won’t work!</p>
+</div>
+</div>
+<div class="section" id="challenge-7">
+<h3>Challenge 7<a class="headerlink" href="#challenge-7" title="Permalink to this headline">¶</a></h3>
+<p>Create a state that the Z gate doesn’t do anything to. You can use the hints below.</p>
+<div class="toggle docutils container">
+<p>Hint (1 of 1): The Z gate flips the left state into the right one, and the right one into the left one, so left and right can’t work!</p>
+</div>
+</div>
+<div class="section" id="challenge-8">
+<h3>Challenge 8<a class="headerlink" href="#challenge-8" title="Permalink to this headline">¶</a></h3>
+<p>Your quantum circuit is built out of quantum gates, and the gates happen to the qubit in a certain order - the first gate changes the qubit, then the next one. Does it matter which gates come first?</p>
+<p>Find two gates which create different circuits when put in a different order.</p>
+<p>You can use the hints below.</p>
+<div class="toggle docutils container">
+<p>Test out X then H, and compare to H then X</p>
+</div>
+</div>
+<div class="section" id="challenge-9">
+<h3>Challenge 9<a class="headerlink" href="#challenge-9" title="Permalink to this headline">¶</a></h3>
+<p>Find two gates which create the same circuit when put in a different order.</p>
+<p>You can use the hints below.</p>
+<div class="toggle docutils container">
+<p>Hint (1 of 1): Test out X then Z, and compare to Z then X.</p>
+</div>
+</div>
+</div>
+<div class="section" id="make-your-own-gate">
+<h2>Make your own gate!<a class="headerlink" href="#make-your-own-gate" title="Permalink to this headline">¶</a></h2>
+<p>For this challenge, you’ll need to click the “see inside” button on the <a class="reference external" href="https://scratch.mit.edu/projects/412175897/">Scratch project page</a>. Once inside the project, click on the “Qubit” sprite and look at the code tab.</p>
+<p>You’ll see the instructions the qubit follows as it moves through the circuit. You can notice that the qubit works using a colour coding system. If it touches the colour corresponding to a certain gate, it will do that gate.</p>
+<p>For this challenge you’ll edit this code and create your own quantum gate!</p>
+<p>To get started, look for the “my gate” sprite. In the code tab you’ll notice a “show” block and a “hide” block. Click the “show” block.</p>
+<p><img alt="" src="../_images/scratch.PNG" />
+<br></p>
+<p>A new sprite will appear in the circuit editor. You can go to the “costumes” tab to change the appearance of your gate (Make sure to keep your gate as a square and don’t change the size, or the circuit won’t work properly!)</p>
+<p>Next go to the Q sprite. You’ll need to an “if” statement so the qubit checks if it is touching the new gate sprite. Then inside the if statement build your quantum gate! You can create a new gate by putting together a few of the existing gates.</p>
+<p>Here’s an example:</p>
+<p><img alt="" src="../_images/scratch2.png" />
+<br></p>
+<p>Once you’ve created your own quantum gate, you’re ready to share your Scratch project! Click on the “Share project” button at the top of the project page. After sharing, add your project to the camp <a class="reference external" href="https://scratch.mit.edu/studios/27046227/">Scratch studio</a>.</p>
+<div class="section" id="explore-other-projects">
+<h3>Explore other Projects<a class="headerlink" href="#explore-other-projects" title="Permalink to this headline">¶</a></h3>
+<p>Check out 2-3 other projects in the Scratch studio. Without looking inside their code, can you figure out what their mystery gate is? How is it built out of the X,H, and Z gates? Post your guess in the comments on their Scratch project page.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="SternGerlach.html" title="previous page">Stern-Gerlach Simulator</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ana Ciocoiu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
