@@ -47,4 +47,6 @@ After the pitch, you'll receive your **quantum engineering certificate**.
 
 Day1/Day1
 Day2/Day2
+Day3/entanglement
+ibmq/first
 ```

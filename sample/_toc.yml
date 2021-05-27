@@ -21,5 +21,17 @@
     - file: Day2/Sup_Vectors
     - file: Day2/SternGerlach
     - file: Day2/QuantumCircuits
+    
+- file: Day3/entanglement
+
+- file: ibmq/first
+  sections: 
+    - file: ibmq/MathToolkit
+    - file: ibmq/Intro
+    - file: ibmq/SuperDenseCoding
+    - file: ibmq/oracles
+    - file: ibmq/grovercode
+
+
 
 

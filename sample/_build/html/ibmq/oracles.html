@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Oracles &#8212; Geering up QC Summer Camp</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Grover Search Code" href="grovercode.html" />
+    <link rel="prev" title="Superdense Coding Tutorial" href="SuperDenseCoding.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Geering up QC Summer Camp</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Summary.html">
+   Welcome to Camp!
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day1/Day1.html">
+   Weirdness into Awesomeness
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Bits.html">
+     The information age
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Qbits.html">
+     Quantum Bits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/DblSlit.html">
+     The Double Slit Experiment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Superposition.html">
+     Superposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/SpkyDst.html">
+     Spooky Action at a Distance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QObj.html">
+     Quantum Objects in Real Life
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QNav.html">
+     Quantum Navigator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/WhyQC.html">
+     Why Quantum Computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Scratch.html">
+     Coding with Scratch!
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day2/Day2.html">
+   Introducing Quantum Information
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Donut.html">
+     Superposition With Donuts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Spin.html">
+     What is Spin?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Sup_Vectors.html">
+     Superposition Vectors (High School Content)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/SternGerlach.html">
+     Stern-Gerlach Simulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/QuantumCircuits.html">
+     Quantum Circuits
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Day3/entanglement.html">
+   Today’s Topic
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="first.html">
+   Quantum Gates on IBMQ
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="MathToolkit.html">
+     Representing Qubits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SuperDenseCoding.html">
+     Superdense Coding Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Quantum Oracles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="grovercode.html">
+     Grover Search Code
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ibmq/oracles.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fibmq/oracles.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/ibmq/oracles.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="quantum-oracles">
+<h1>Quantum Oracles<a class="headerlink" href="#quantum-oracles" title="Permalink to this headline">¶</a></h1>
+<p><img alt="" src="../_images/jeff.PNG" /></p>
+<div class="section" id="id1">
+<h2><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say you have a massive pile of cold, hard cash and you know that there is one counterfeit bill in the whole stash. Let’s say there are 50 bills total, including the counterfeit one. You have a special machine that can take one bill at a time, and emit a loud ‘beep’ if a fake bill is detected. How many bills do you have to check this way before you find the counterfeit one?</p>
+<div class="toggle docutils container">
+<p>About 50.</p>
+</div>
+<p>Now let’s pretend that our bill checker is a black box. We don’t know how it identifies the counterfeit bills. All we can say is that it has an internal mathematical function that it applies to each bill, and the output, either a 0 or 1, will indicate the result of that function <a class="reference external" href="http://evaluation.In">evaluation.In</a> other words, we can write:</p>
+<p><span class="math notranslate nohighlight">\(ƒ(x) = 1\)</span> or <span class="math notranslate nohighlight">\(ƒ(x) = 0\)</span></p>
+<p>Let’s make the pile of bills smaller so that we can see what’s going on. Say there are 4 bills in total with one counterfeit bill. We can represent the input bills as a 4-digit binary string, with a 1 in the place of the bill that is currently being checked. The output of this operation with be a 1 if the bill is counterfeit, and a zero if it is legitimate.</p>
+<p><img alt="" src="../_images/check.png" /></p>
+<p>For example, if the third bill is counterfeit, then we can write: <br>
+<br>
+<br>
+<span class="math notranslate nohighlight">\(ƒ(1000)\)</span> = 0
+<br>
+<span class="math notranslate nohighlight">\(ƒ(0100)\)</span> = 0
+<br>
+<span class="math notranslate nohighlight">\(ƒ(0010)\)</span> = 1
+<br>
+<span class="math notranslate nohighlight">\(ƒ(0001)\)</span> = 0</p>
+<p>The black box will simply evaluate the function: it does not ‘know’ that correct answer internally. In quantum computing, a black box that performs a this type of function evaluation without having any knowledge of the solution is called an “oracle,” like the Oracle at Delphi (in case there are some Greek mythology lovers out there!). Oracles are very useful because there are many computational problems in which it’s difficult to find a solution, but relatively easy to verify a solution.</p>
+<p>Let’s look at an algorithm (called Grover’s algorithm) that can act like the counterfeit bill detector shown above. Given a set of input data of size M containing a single solution to a given problem, the Grover algorithm will find the solution in <span class="math notranslate nohighlight">\(\sqrt{N}\)</span> iterations, compared to N iterations for the classical search case.</p>
+<p>This becomes very important for searching extremely large data sets! In this example, we’re going to implement the Grover search quantum circuit and run it on both a quantum simulator and a real quantum computer. For simplicity’s sake, let’s keep the circuit very small (2 qubits).</p>
+<p>Let’s say we have 4 bills, and one of  them is faulty. We give each bill an index: 1, 2, 3, and 4. These indices are then represented by our qubit states.</p>
+<p>The searching algorithm starts by initializing all the qubits to the zero state, <span class="math notranslate nohighlight">\(\vert0\rangle\)</span>. The joint state of the 2- qubit system can be written as  <span class="math notranslate nohighlight">\(\vert 00\rangle\)</span>. This is done automatically in the IBMQ composer.</p>
+<p>The next step is to put all the qubits into a superposition by applying an H gate to each one. Since there are two qubits in the system, there will be 4 states in the superposition:</p>
+<p><img alt="" src="../_images/superposition.png" /></p>
+<p>We can actually ‘see’ this superposition on the Bloch sphere, if we build the circuit in the <em>full</em> Circuit Composer. The superposition states will contain all possible two-qubit states. That is, a single qubit will be either <span class="math notranslate nohighlight">\(\vert0\rangle\)</span> or <span class="math notranslate nohighlight">\(\vert1\rangle\)</span>. Combined, this gives us four possible states:
+<br></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vert00\rangle\)</span>  (both qubits in the 0 state) <br></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vert01\rangle\)</span>   (one qubit in 0 and  the other in 1) <br></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vert10\rangle\)</span>  (one qubit in 1 and the other in 0) <br></p></li>
+</ul>
+<p>and<br></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vert11\rangle\)</span>  (both qubits in the 1 state).</p></li>
+</ul>
+<p>We can see that there states all have an equal probability of being measured by takign a look at the Bloch sphere:</p>
+<p><img alt="" src="../_images/bloch4.png" /></p>
+<hr class="docutils" />
+<p>If we measure all the qubits in the circuit right now, what is the probability that we will get one of the four states,<span class="math notranslate nohighlight">\(\vert01\rangle\)</span> ?</p>
+<ul class="simple">
+<li><p>50%</p></li>
+<li><p>12.5%</p></li>
+<li><p>25%</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>25%. We only have four choices of states. That is, the first qubit can be in state 0 or state 1, and the second qubit can be in state zero or state one. Try working out these combinations to get the possible states! We can have either <span class="math notranslate nohighlight">\(\vert00\rangle\)</span>,<span class="math notranslate nohighlight">\(\vert01\rangle\)</span> ,<span class="math notranslate nohighlight">\(\vert10\rangle\)</span>, or <span class="math notranslate nohighlight">\(\vert11\rangle\)</span>, each with a 25% chance.</p>
+</div>
+<p>If we measure the first qubit, what is the probability that we will measure it in the <span class="math notranslate nohighlight">\(\vert1\rangle\)</span>
+state?</p>
+<ul class="simple">
+<li><p>25%</p></li>
+<li><p>50%</p></li>
+<li><p>12.5%</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>We have two states in which the first qubit is in the <span class="math notranslate nohighlight">\(\vert1\rangle\)</span> state: <span class="math notranslate nohighlight">\(\vert10\rangle\)</span> and <span class="math notranslate nohighlight">\(\vert11\rangle\)</span>.</p>
+</div>
+<p>Now let’s look at the second step in the circuit. We will create a ‘mystery function’ called the <strong>Grover iteration</strong>. This circuit is applied a certain number of times, and what it does in amplify the probability of measuring the state that is a solution to our problem. Since we only have 2 qubits, we only need to apply this iteration once.</p>
+<p><img alt="" src="../_images/grover1.png" /></p>
+<p>Let’s represent all of our four possible solutions with 3-D blocks. These solutions are created by the Hadamard operation. The block that represents the solution state of the problem is marked in red. Initially, all of the blocks have the same height: if we measure the system, we will get one of four outcomes with equal probability.</p>
+<p><img alt="" src="../_images/grover2.png" /></p>
+<p>Now, we can apply the ‘Grover Iteration’ to the blocks. This step contains, among other things, the Oracle, which will first ‘mark’ the solution by inverting the block:</p>
+<p><img alt="" src="../_images/grover3.PNG" /></p>
+<p>Then, these blocks (representing amplitudes of the states) are passed through an amplification circuit, which will only increase the amplitude of the marked solution:</p>
+<p><img alt="" src="../_images/grover4.PNG" /></p>
+<p>After a predetermined number of iterations, the amplitude of the solution block will far exceed those of the other states:</p>
+<p><img alt="" src="../_images/grover5.PNG" /></p>
+<p>Now, if we measure the states, we will get a pretty high probability of measuring the correct <span class="math notranslate nohighlight">\(\vert01\rangle\)</span>
+state, which in this case represents the solution to the problem we’ve been trying to solve.</p>
+<p>This should give you enough background that you can follow along with the code in the next part!</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ibmq"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="SuperDenseCoding.html" title="previous page">Superdense Coding Tutorial</a>
+    <a class='right-next' id="next-link" href="grovercode.html" title="next page">Grover Search Code</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ana Ciocoiu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
