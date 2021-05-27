@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Superposition Vectors (High School Content) &#8212; Geering up QC Summer Camp</title>
+    <title>Quantum Circuits on IBMQ &#8212; Geering up QC Summer Camp</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -52,12 +52,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Stern-Gerlach Simulator" href="SternGerlach.html" />
-    <link rel="prev" title="What is Spin?" href="Spin.html" />
+    <link rel="next" title="Superdense Coding Tutorial" href="SuperDenseCoding.html" />
+    <link rel="prev" title="Representing Qubits" href="MathToolkit.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -149,33 +147,33 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="Day2.html">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day2/Day2.html">
    Introducing Quantum Information
   </a>
-  <ul class="current collapse-ul">
+  <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="Donut.html">
+    <a class="reference internal" href="../Day2/Donut.html">
      Superposition With Donuts
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Spin.html">
+    <a class="reference internal" href="../Day2/Spin.html">
      What is Spin?
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Sup_Vectors.html">
      Superposition Vectors (High School Content)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="SternGerlach.html">
+    <a class="reference internal" href="../Day2/SternGerlach.html">
      Stern-Gerlach Simulator
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="QuantumCircuits.html">
+    <a class="reference internal" href="../Day2/QuantumCircuits.html">
      Quantum Circuits
     </a>
    </li>
@@ -188,28 +186,33 @@
    Today’s Topic
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../ibmq/first.html">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="first.html">
    Quantum Gates on IBMQ
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../ibmq/MathToolkit.html">
+    <a class="reference internal" href="MathToolkit.html">
      Representing Qubits
     </a>
    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Quantum Circuits on IBMQ
+    </a>
+   </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ibmq/SuperDenseCoding.html">
+    <a class="reference internal" href="SuperDenseCoding.html">
      Superdense Coding Tutorial
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ibmq/oracles.html">
+    <a class="reference internal" href="oracles.html">
      Quantum Oracles
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ibmq/grovercode.html">
+    <a class="reference internal" href="grovercode.html">
      Grover Search Code
     </a>
    </li>
@@ -257,7 +260,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Day2/Sup_Vectors.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ibmq/Intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -277,7 +280,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay2/Sup_Vectors.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fibmq/Intro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -298,29 +301,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-would-you-get-if-you-made-a-superposition-of-leftarrow-and-rightarrow">
-   What would you get if you made a superposition of
-   <span class="math notranslate nohighlight">
-    \(\leftarrow\)
-   </span>
-   and
-   <span class="math notranslate nohighlight">
-    \(\rightarrow\)
-   </span>
-   ?
-  </a>
- </li>
-</ul>
-
-        </nav>
-        
         </div>
     </div>
 </div>
@@ -329,56 +309,22 @@
         
               <div>
                 
-  <div class="section" id="superposition-vectors-high-school-content">
-<h1>Superposition Vectors (High School Content)<a class="headerlink" href="#superposition-vectors-high-school-content" title="Permalink to this headline">¶</a></h1>
-<p>Next, we’re going to look at how superposition states are represented. This is going to give you enough knowledge to fully explore the activities that follow!</p>
-<p>This requires a bit of math, but if you know what a sphere is and what line is, you should do just fine. Don’t let the weird notation fool you. Physicists like to make things fancy by using Greek letters and wacky symbols, but in the end all we are doing is a little geometry.</p>
-<p>So far we have learned that qubits can be in any combination of four states. A <em>state</em> can refer to anything: it can refer to spin (like we saw in the previous activity) or any other <em>quantum property</em> that we find useful. We’ll be looking at <em>spin states</em> in the next activity, so feel free to think about states that way, if you like.
-Let’s look at the first two of these states, and represent them using a new kind of notation. This will make it easier to deal with them. Don’t think too much about the form of the notation, just take it as a given for now.</p>
-<p><span class="math notranslate nohighlight">\(\uparrow\;qubit\;state\;=|0\rangle\)</span>
-<br>
-<span class="math notranslate nohighlight">\(\downarrow\; qubit\;state \;= |1 \rangle\)</span>
-<br></p>
-<p>These states can be used to represent spin up and spin down.
-From here onwards, we will refer to qubits as <span class="math notranslate nohighlight">\(|0\rangle\)</span> or <span class="math notranslate nohighlight">\(|1\rangle\)</span> instead of <span class="math notranslate nohighlight">\(\uparrow\)</span> or <span class="math notranslate nohighlight">\(\downarrow\)</span>  .</p>
-<p>The symbols <span class="math notranslate nohighlight">\(|\;\rangle\)</span> used to describe the qubits are just a fashionable way of describing simple vectors as given below:</p>
-<p><span class="math notranslate nohighlight">\(|0 \rangle\;=\;\begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span>
-<br></p>
-<p><span class="math notranslate nohighlight">\(|1 \rangle\;=\;\begin{bmatrix} 0 \\ 1 \end{bmatrix}\)</span></p>
-<p>If you’re not too familiar with the concept of vectors, don’t worry! You can imagine a 2-D vector, like the one above, as a set of x and y coordinates. For example, <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span> will have x=1, y=0. If you draw a line to this point from the origin, that will be your ‘vector’! Vectors are just lines, with one end that is fixed somewhere and another end (the one with the little arrow) free to move about.</p>
-<p><img alt="" src="../_images/vector.png" /></p>
-<p>The quantum states, <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span> are special vector states called <em>basis vectors</em>. What that means is that you can construct any quantum state by a combination (such as addition, subtraction, multiplication by a number) of the  <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span> states.</p>
-<p>This means that the other two states we have seen, <span class="math notranslate nohighlight">\(\leftarrow\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span> can be written as superpositions of the <span class="math notranslate nohighlight">\(\uparrow\)</span> and  <span class="math notranslate nohighlight">\(\downarrow\)</span> states! So these states will contain both  <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span> in equal amounts.</p>
-<p>These states can be written as:</p>
-<p><span class="math notranslate nohighlight">\(\leftarrow\; = |0 \rangle + |1 \rangle\)</span>
-<br>
-<span class="math notranslate nohighlight">\(\rightarrow\; = |0 \rangle - |1 \rangle\)</span>
-<br></p>
-<p>Any quantum state can be written by a combination of basis vectors, so any random state can be represented with variables.</p>
-<p><span class="math notranslate nohighlight">\(state\; =\; a|0 \rangle + b|1 \rangle\)</span></p>
-<p>This notation might be a little weird, but it’s worth the effort to understand it since most online resources will use this format!
-<span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are variables that show us how <em>much</em> of each basis state exists in the new state. Because the state contains amounts of <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span>, it is said to be in a <em>superposition</em> of <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span> states. Superpositions are a quantum property. This means that when measured, we will get a classical value—either 0 or 1— with a certain probability.</p>
-<hr class="docutils" />
-<div class="section" id="what-would-you-get-if-you-made-a-superposition-of-leftarrow-and-rightarrow">
-<h2>What would you get if you made a superposition of <span class="math notranslate nohighlight">\(\leftarrow\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span>?<a class="headerlink" href="#what-would-you-get-if-you-made-a-superposition-of-leftarrow-and-rightarrow" title="Permalink to this headline">¶</a></h2>
-<div class="toggle docutils container">
-<p>Since <span class="math notranslate nohighlight">\(\leftarrow\)</span> is <span class="math notranslate nohighlight">\(|0 \rangle + |1 \rangle\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span> is <span class="math notranslate nohighlight">\(|0 \rangle - |1 \rangle\)</span>, their sum will be <span class="math notranslate nohighlight">\(|0 \rangle\)</span> or <span class="math notranslate nohighlight">\(\uparrow\)</span></p>
-</div>
-<p>The state <span class="math notranslate nohighlight">\(|0\rangle\)</span> can be represented as <span class="math notranslate nohighlight">\(|0\rangle\)</span> or as <span class="math notranslate nohighlight">\(\leftarrow\;+\;\rightarrow\)</span> and end up looking the same!
-Similarly, <span class="math notranslate nohighlight">\(|1\rangle\)</span> can be written as <span class="math notranslate nohighlight">\(\leftarrow\;-\;\rightarrow\)</span>.</p>
-<p>Since <span class="math notranslate nohighlight">\(\leftarrow\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span> can be used to represent any quantum state, they too form a <em>basis</em>.</p>
-<p>All this means is that we have a lot of freedom in how we want to represent our qubit!</p>
-<p>Let’s represent these vectors on an x-y plane to see what they ‘look’ like:</p>
-<p><span class="math notranslate nohighlight">\(\leftarrow\;=\;\begin{bmatrix} 1 \\ 0 \end{bmatrix}\;+\;\begin{bmatrix} 0 \\ 1 \end{bmatrix}\;=\;\begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span></p>
-<p>We can use similar logic for <span class="math notranslate nohighlight">\(\rightarrow\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\rightarrow\;=\;\begin{bmatrix} 1 \\ 0 \end{bmatrix}\;-\;\begin{bmatrix} 0 \\ 1 \end{bmatrix}\;=\;\begin{bmatrix} 1 \\ -1 \end{bmatrix}\)</span></p>
-<p>We can represent this on an x-y plane.</p>
-<p><img alt="" src="../_images/cartesian.png" /></p>
-<br>
-<p>Now you can see how adding the red and black arrows together will give the <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span> state.</p>
-<p>When we mean that a state is a superposition of two other states, we’re basically just doing vector addition!</p>
-<p>Thinking this way will come in handy when you’re playing with the experiments in the next activity.</p>
-</div>
+  <div class="section" id="quantum-circuits-on-ibmq">
+<h1>Quantum Circuits on IBMQ<a class="headerlink" href="#quantum-circuits-on-ibmq" title="Permalink to this headline">¶</a></h1>
+<p>Let’s look at how quantum circuits are represented. A quantum circuit will usually have both qubits and classical bits. For this section, we’ll be using the IBMQ Quantum Composer. This is the drag and drop circuit editor that we will be using as a ‘plugin’ to some later projects. For now, though, go ahead and explore the full circuit composer.</p>
+<p>You’ll need to create an <a class="reference external" href="https://quantum-computing.ibm.com/">account</a> to use the IMBQ platform but it’s very easy! Follow the instructions that your instructor provides.</p>
+<p>Qubits are represented as <em>q_0, q_1, q_2,</em> etc. The circuit shown below has three quantum bits and once classical bit <em>c3</em>. Each qubit has a ‘wire’ on which gates can be placed.</p>
+<p>The gate that is place on a qubit wire acts on that qubit specifically. In this case, we have a NOT or X gate acting on qubit <em>q_0</em>. The X gate is represented with a plus sign pretty much everywhere, so I’m introducing it here to help you get used to it.</p>
+<p><img alt="" src="../_images/circuit.png" /></p>
+<p>The square with z in it at the end represents measurement. At the end of the circuit, the states are measured and we will get either 0 or 1 as a result in our classical bit c3 since we are measuring in the and</p>
+<p>basis. If we repeat the circuit many times, we will get outcome statistics: for x% of the time we will get an outcome of 0 and for y% of the time we will get an outcome of 1.</p>
+<p>These are also displayed to you in the measurement statistics bar:</p>
+<p><img alt="" src="../_images/measurement1.png" /></p>
+<p>The state of the system is also represented on the Bloch sphere. This can get really complicated for more than one qubit, but it’s nice to take a look and see what is going on!</p>
+<p><img alt="" src="../_images/bloch3.png" /></p>
+<p>If you want to spend some more time learning the ropes, check out the documentation <a class="reference external" href="https://quantum-computing.ibm.com/composer/docs/iqx/first-circuit">here</a>.</p>
+<p>For those interested in computer science, you can take a look at the code being generated by your actions by clicking the <strong>&lt;&gt;code tab</strong>,  in the upper right corner.</p>
+<p>Otherwise, let’s get started building some circuits!</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -394,7 +340,7 @@ Similarly, <span class="math notranslate nohighlight">\(|1\rangle\)</span> can b
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Day2"
+            path: "./ibmq"
         },
         predefinedOutput: true
     }
@@ -406,8 +352,8 @@ Similarly, <span class="math notranslate nohighlight">\(|1\rangle\)</span> can b
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Spin.html" title="previous page">What is Spin?</a>
-    <a class='right-next' id="next-link" href="SternGerlach.html" title="next page">Stern-Gerlach Simulator</a>
+    <a class='left-prev' id="prev-link" href="MathToolkit.html" title="previous page">Representing Qubits</a>
+    <a class='right-next' id="next-link" href="SuperDenseCoding.html" title="next page">Superdense Coding Tutorial</a>
 
         </div>
         

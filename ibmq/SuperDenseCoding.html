@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Superposition Vectors (High School Content) &#8212; Geering up QC Summer Camp</title>
+    <title>Superdense Coding Tutorial &#8212; Geering up QC Summer Camp</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,8 +56,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Stern-Gerlach Simulator" href="SternGerlach.html" />
-    <link rel="prev" title="What is Spin?" href="Spin.html" />
+    <link rel="next" title="Quantum Oracles" href="oracles.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="Intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -149,33 +149,33 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="Day2.html">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day2/Day2.html">
    Introducing Quantum Information
   </a>
-  <ul class="current collapse-ul">
+  <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="Donut.html">
+    <a class="reference internal" href="../Day2/Donut.html">
      Superposition With Donuts
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Spin.html">
+    <a class="reference internal" href="../Day2/Spin.html">
      What is Spin?
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Sup_Vectors.html">
      Superposition Vectors (High School Content)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="SternGerlach.html">
+    <a class="reference internal" href="../Day2/SternGerlach.html">
      Stern-Gerlach Simulator
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="QuantumCircuits.html">
+    <a class="reference internal" href="../Day2/QuantumCircuits.html">
      Quantum Circuits
     </a>
    </li>
@@ -188,28 +188,28 @@
    Today’s Topic
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../ibmq/first.html">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="first.html">
    Quantum Gates on IBMQ
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../ibmq/MathToolkit.html">
+    <a class="reference internal" href="MathToolkit.html">
      Representing Qubits
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ibmq/SuperDenseCoding.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Superdense Coding Tutorial
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ibmq/oracles.html">
+    <a class="reference internal" href="oracles.html">
      Quantum Oracles
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ibmq/grovercode.html">
+    <a class="reference internal" href="grovercode.html">
      Grover Search Code
     </a>
    </li>
@@ -257,7 +257,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Day2/Sup_Vectors.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ibmq/SuperDenseCoding.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -277,7 +277,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay2/Sup_Vectors.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fibmq/SuperDenseCoding.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -305,16 +305,13 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-would-you-get-if-you-made-a-superposition-of-leftarrow-and-rightarrow">
-   What would you get if you made a superposition of
-   <span class="math notranslate nohighlight">
-    \(\leftarrow\)
-   </span>
-   and
-   <span class="math notranslate nohighlight">
-    \(\rightarrow\)
-   </span>
-   ?
+  <a class="reference internal nav-link" href="#if-we-measure-the-first-particle-of-this-bell-state-and-get-a-1-what-will-the-outcome-of-the-second-measurement-be">
+   If we measure the first particle of this Bell state and get a 1, what will the outcome of the second measurement be?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#now-let-s-create-alice-s-part-of-the-circuit-alice-can-transmit-any-combination-of-two-classical-bits-how-many-combinations-are-there">
+   Now let’s create Alice’s part of the circuit. Alice can transmit any combination of two classical bits. How many combinations are there?
   </a>
  </li>
 </ul>
@@ -329,55 +326,58 @@
         
               <div>
                 
-  <div class="section" id="superposition-vectors-high-school-content">
-<h1>Superposition Vectors (High School Content)<a class="headerlink" href="#superposition-vectors-high-school-content" title="Permalink to this headline">¶</a></h1>
-<p>Next, we’re going to look at how superposition states are represented. This is going to give you enough knowledge to fully explore the activities that follow!</p>
-<p>This requires a bit of math, but if you know what a sphere is and what line is, you should do just fine. Don’t let the weird notation fool you. Physicists like to make things fancy by using Greek letters and wacky symbols, but in the end all we are doing is a little geometry.</p>
-<p>So far we have learned that qubits can be in any combination of four states. A <em>state</em> can refer to anything: it can refer to spin (like we saw in the previous activity) or any other <em>quantum property</em> that we find useful. We’ll be looking at <em>spin states</em> in the next activity, so feel free to think about states that way, if you like.
-Let’s look at the first two of these states, and represent them using a new kind of notation. This will make it easier to deal with them. Don’t think too much about the form of the notation, just take it as a given for now.</p>
-<p><span class="math notranslate nohighlight">\(\uparrow\;qubit\;state\;=|0\rangle\)</span>
-<br>
-<span class="math notranslate nohighlight">\(\downarrow\; qubit\;state \;= |1 \rangle\)</span>
-<br></p>
-<p>These states can be used to represent spin up and spin down.
-From here onwards, we will refer to qubits as <span class="math notranslate nohighlight">\(|0\rangle\)</span> or <span class="math notranslate nohighlight">\(|1\rangle\)</span> instead of <span class="math notranslate nohighlight">\(\uparrow\)</span> or <span class="math notranslate nohighlight">\(\downarrow\)</span>  .</p>
-<p>The symbols <span class="math notranslate nohighlight">\(|\;\rangle\)</span> used to describe the qubits are just a fashionable way of describing simple vectors as given below:</p>
-<p><span class="math notranslate nohighlight">\(|0 \rangle\;=\;\begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span>
-<br></p>
-<p><span class="math notranslate nohighlight">\(|1 \rangle\;=\;\begin{bmatrix} 0 \\ 1 \end{bmatrix}\)</span></p>
-<p>If you’re not too familiar with the concept of vectors, don’t worry! You can imagine a 2-D vector, like the one above, as a set of x and y coordinates. For example, <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span> will have x=1, y=0. If you draw a line to this point from the origin, that will be your ‘vector’! Vectors are just lines, with one end that is fixed somewhere and another end (the one with the little arrow) free to move about.</p>
-<p><img alt="" src="../_images/vector.png" /></p>
-<p>The quantum states, <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span> are special vector states called <em>basis vectors</em>. What that means is that you can construct any quantum state by a combination (such as addition, subtraction, multiplication by a number) of the  <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span> states.</p>
-<p>This means that the other two states we have seen, <span class="math notranslate nohighlight">\(\leftarrow\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span> can be written as superpositions of the <span class="math notranslate nohighlight">\(\uparrow\)</span> and  <span class="math notranslate nohighlight">\(\downarrow\)</span> states! So these states will contain both  <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span> in equal amounts.</p>
-<p>These states can be written as:</p>
-<p><span class="math notranslate nohighlight">\(\leftarrow\; = |0 \rangle + |1 \rangle\)</span>
-<br>
-<span class="math notranslate nohighlight">\(\rightarrow\; = |0 \rangle - |1 \rangle\)</span>
-<br></p>
-<p>Any quantum state can be written by a combination of basis vectors, so any random state can be represented with variables.</p>
-<p><span class="math notranslate nohighlight">\(state\; =\; a|0 \rangle + b|1 \rangle\)</span></p>
-<p>This notation might be a little weird, but it’s worth the effort to understand it since most online resources will use this format!
-<span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are variables that show us how <em>much</em> of each basis state exists in the new state. Because the state contains amounts of <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span>, it is said to be in a <em>superposition</em> of <span class="math notranslate nohighlight">\(|0 \rangle\)</span> and <span class="math notranslate nohighlight">\(|1 \rangle\)</span> states. Superpositions are a quantum property. This means that when measured, we will get a classical value—either 0 or 1— with a certain probability.</p>
-<hr class="docutils" />
-<div class="section" id="what-would-you-get-if-you-made-a-superposition-of-leftarrow-and-rightarrow">
-<h2>What would you get if you made a superposition of <span class="math notranslate nohighlight">\(\leftarrow\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span>?<a class="headerlink" href="#what-would-you-get-if-you-made-a-superposition-of-leftarrow-and-rightarrow" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="superdense-coding-tutorial">
+<h1>Superdense Coding Tutorial<a class="headerlink" href="#superdense-coding-tutorial" title="Permalink to this headline">¶</a></h1>
+<p>Now that we’ve explored measurement as part of some simple simulations, it’s time to take a look at some interesting circuits that can be build and run on a real quantum computer! Go ahead and download the Jupyter notebook for this exercise and then open it inside the IBMQ experience quantum lab.</p>
+<p>Let’s do a little thought experiment with our good friends Alice and Bob. They still haven’t mastered interplanetary communication!</p>
+<p>The new communications channel set up by NASA on Mars is still in its testing phases, and so its capacity is limited. Since Alice and Bob still share an entangled state (each has one of the two entangled qubits), Alice wonders if it is possible to send multiple bits of classical information to Bob using just her half of the state and some quantum gates. This way, she can avoid overloading the channel and share as much information with Bob as she likes!</p>
+<p>What happens is that Alice will apply a specific quantum gate to her qubit (corresponding to the information she wants to send) and then send her half of the entangled state to Bob. Bob will measure both his and Alice’s qubits, and determine the two bits of information that Alice wanted to send to him. It seems as if Alice has ‘sent’ two bits of information through a single qubit! This is why this is called <strong>superdense coding</strong>.</p>
+<p>I’ve split up this circuit into three sections: red, blue, and purple, representing one block of the circuit. We’ll go through each of these blocks in order to build the circuit!</p>
+<p><img alt="" src="../_images/AB.png" /></p>
+<p>This circuit illustrates something fundamentally important about quantum information: a resource (our entangled state) created at an earlier time with no purpose in mind can be used at a later date to transmit information. The entangled particles haven’t seen each other since they were created, and yet they can be used to share this information. That’s wild!</p>
+<p>First, we have to entangle the particles. Let’s do that by creating the following circuit inside the interactive code editor:</p>
+<p><img alt="" src="../_images/step1.png" /></p>
+<p>This circuit will create a <em>Bell state</em>, written as <span class="math notranslate nohighlight">\(|00\rangle\frac{1}{\sqrt{2}} + |10\rangle\frac{1}{\sqrt{2}}\)</span>.</p>
+<p>The first of these states <span class="math notranslate nohighlight">\(|00\rangle\)</span> corresponds to both particles being in the 0 state and the second, <span class="math notranslate nohighlight">\(11\rangle\)</span> to both of them being in the state. All this means is that the two qubits, <em>q0</em> and <em>q1</em> are either both 0 or both 1 when measured. There is a 50% chance that the first qubit will be measured as either 0 or 1, and a 100% chance of getting the same measurement for the second qubit. The outcome of a measurement on this type of entangled state, called a Bell state, will always be correlated. You might remember this from the section on entanglement.</p>
+<p>If you build this circuit in the <strong>full</strong> circuit composer, you’ll be able to see the states on the Bloch sphere, as well as the measurement outcomes listed above.</p>
+<div class="section" id="if-we-measure-the-first-particle-of-this-bell-state-and-get-a-1-what-will-the-outcome-of-the-second-measurement-be">
+<h2>If we measure the first particle of this Bell state and get a 1, what will the outcome of the second measurement be?<a class="headerlink" href="#if-we-measure-the-first-particle-of-this-bell-state-and-get-a-1-what-will-the-outcome-of-the-second-measurement-be" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>0, 100% certain</p></li>
+<li><p>1, 50% certain</p></li>
+<li><p>1, 100% certain</p></li>
+</ul>
 <div class="toggle docutils container">
-<p>Since <span class="math notranslate nohighlight">\(\leftarrow\)</span> is <span class="math notranslate nohighlight">\(|0 \rangle + |1 \rangle\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span> is <span class="math notranslate nohighlight">\(|0 \rangle - |1 \rangle\)</span>, their sum will be <span class="math notranslate nohighlight">\(|0 \rangle\)</span> or <span class="math notranslate nohighlight">\(\uparrow\)</span></p>
+<p>1, 100% certain.</p>
 </div>
-<p>The state <span class="math notranslate nohighlight">\(|0\rangle\)</span> can be represented as <span class="math notranslate nohighlight">\(|0\rangle\)</span> or as <span class="math notranslate nohighlight">\(\leftarrow\;+\;\rightarrow\)</span> and end up looking the same!
-Similarly, <span class="math notranslate nohighlight">\(|1\rangle\)</span> can be written as <span class="math notranslate nohighlight">\(\leftarrow\;-\;\rightarrow\)</span>.</p>
-<p>Since <span class="math notranslate nohighlight">\(\leftarrow\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span> can be used to represent any quantum state, they too form a <em>basis</em>.</p>
-<p>All this means is that we have a lot of freedom in how we want to represent our qubit!</p>
-<p>Let’s represent these vectors on an x-y plane to see what they ‘look’ like:</p>
-<p><span class="math notranslate nohighlight">\(\leftarrow\;=\;\begin{bmatrix} 1 \\ 0 \end{bmatrix}\;+\;\begin{bmatrix} 0 \\ 1 \end{bmatrix}\;=\;\begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span></p>
-<p>We can use similar logic for <span class="math notranslate nohighlight">\(\rightarrow\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\rightarrow\;=\;\begin{bmatrix} 1 \\ 0 \end{bmatrix}\;-\;\begin{bmatrix} 0 \\ 1 \end{bmatrix}\;=\;\begin{bmatrix} 1 \\ -1 \end{bmatrix}\)</span></p>
-<p>We can represent this on an x-y plane.</p>
-<p><img alt="" src="../_images/cartesian.png" /></p>
-<br>
-<p>Now you can see how adding the red and black arrows together will give the <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span> state.</p>
-<p>When we mean that a state is a superposition of two other states, we’re basically just doing vector addition!</p>
-<p>Thinking this way will come in handy when you’re playing with the experiments in the next activity.</p>
+</div>
+<div class="section" id="now-let-s-create-alice-s-part-of-the-circuit-alice-can-transmit-any-combination-of-two-classical-bits-how-many-combinations-are-there">
+<h2>Now let’s create Alice’s part of the circuit. Alice can transmit any combination of two classical bits. How many combinations are there?<a class="headerlink" href="#now-let-s-create-alice-s-part-of-the-circuit-alice-can-transmit-any-combination-of-two-classical-bits-how-many-combinations-are-there" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>2</p></li>
+<li><p>1</p></li>
+<li><p>4</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>4: we have two qubits and each can be 0 or 1. So we can have 00, 01, 10, or 11 as bit combinations.</p>
+</div>
+<p>To create Alice’s part of the circuit, we will have to apply gates conditionally: that is, for a specific message that we want to send, we will apply different combinations of gates. It’s beyond the scope of this activity to determine exactly which gates need to be used, so a function called <strong>encode_message</strong> has already been written for this purpose. Base on the value in the string <em>message</em>, this function will apply the necessary gates to Alice’s part of the entangled state. You can modify the message you are sending by changing the value of this string!</p>
+<p>In this example, I used a message value of ‘01’.</p>
+<p>You can see that we’ve completed two parts of the circuit already!</p>
+<p><img alt="" src="../_images/step2.png" /></p>
+<p>Now on to the last part of the circuit! To recover the information that was sent, Bob basically has to ‘undo’ the entanglement that was done in the red block. He can do this by applying the entanglement circuit in reverse. Add a reversed version of the red block circuit to your current circuit in the editor.</p>
+<p>Then, to obtain the classical bits Alice was sending, Bob has to transform his quantum information to classical information by measuring both qubits! Let’s add this measurement to the circuit as well.</p>
+<p>The final circuit Block should look like this:</p>
+<p><img alt="" src="../_images/step3.png" /></p>
+<p>Now, run the cell that submits the circuit to the quantum simulator. The quantum simulator is a classical simulation of what is likely to happen on an idealized quantum computer.</p>
+<ul class="simple">
+<li><p>What is the output of your measurement? Is it what you expected? Try changing the message to see what happens.</p></li>
+<li><p>What is the accuracy of the simulation? A bar graph and Bloch sphere plot is provided to help you visualize the data.</p></li>
+</ul>
+<p>We can also run this circuit on a real quantum computer to see how it will behave differently from an idealized case. The computers are typically very busy so there may be a bit of a wait time. *It may be best to do this in breakout rooms and have one person/room run the circuit.</p>
+<p>A job monitor has been added to let you know when the circuit has executed. Plot the results. What is (are) the output(s) of the measurement? What is  the accuracy of the real quantum computer? If you noticed any changes in accuracy from the simulator, discuss why you think they may arise!</p>
+<p>Below is a sampling of results for the simulator (left) and quantum (right) runs.</p>
+<p><img alt="" src="../_images/results.png" /></p>
 </div>
 </div>
 
@@ -394,7 +394,7 @@ Similarly, <span class="math notranslate nohighlight">\(|1\rangle\)</span> can b
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Day2"
+            path: "./ibmq"
         },
         predefinedOutput: true
     }
@@ -406,8 +406,8 @@ Similarly, <span class="math notranslate nohighlight">\(|1\rangle\)</span> can b
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Spin.html" title="previous page">What is Spin?</a>
-    <a class='right-next' id="next-link" href="SternGerlach.html" title="next page">Stern-Gerlach Simulator</a>
+    <a class='left-prev' id="prev-link" href="Intro.html" title="previous page">&lt;no title&gt;</a>
+    <a class='right-next' id="next-link" href="oracles.html" title="next page">Quantum Oracles</a>
 
         </div>
         
