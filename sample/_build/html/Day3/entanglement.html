@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Today’s Topic &#8212; Geering up QC Summer Camp</title>
+    <title>Entanglement &#8212; Geering up QC Summer Camp</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,7 +56,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quantum Gates on IBMQ" href="../ibmq/first.html" />
+    <link rel="next" title="Entanglement Activity" href="ent2.html" />
     <link rel="prev" title="Quantum Circuits" href="../Day2/QuantumCircuits.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -183,9 +183,62 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="current reference internal" href="#">
-   Today’s Topic
+   Entanglement
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ent2.html">
+     Entanglement Activity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Challenges.html">
+     Circuit Challenges
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="teleportation.html">
+     Joey Goes to Mars
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day4/intro.html">
+   Quantum Algorithms
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day4/SuperpositionAgain.html">
+     Superposition Again
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day4/pickle.html">
+     A Pickle Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day4/exploring.html">
+     Exploring Further
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day4/ProjectIdeas.html">
+     Ideas
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Day5/Project.html">
+   Project Day
   </a>
  </li>
  <li class="toctree-l1 collapsible-parent">
@@ -196,6 +249,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../ibmq/MathToolkit.html">
      Representing Qubits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/Intro.html">
+     Quantum Circuits on IBMQ
     </a>
    </li>
    <li class="toctree-l2">
@@ -305,7 +363,7 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entanglement">
+  <a class="reference internal nav-link" href="#id1">
    Entanglement
   </a>
  </li>
@@ -321,13 +379,13 @@
         
               <div>
                 
-  <div class="section" id="today-s-topic">
-<h1>Today’s Topic<a class="headerlink" href="#today-s-topic" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="entanglement">
+<h1>Entanglement<a class="headerlink" href="#entanglement" title="Permalink to this headline">¶</a></h1>
 <p>Yesterday was all about the basic chunk of quantum information, called a qubit. We learned about how quantum computers do things to qubits using quantum gates, like the X, Z, and H gate from the Scratch activity.</p>
 <p>Today will be all about what happens when there are two qubits.</p>
 <p>As we’ll see, the quantum world becomes much, much stranger when we have two qubits!</p>
-<div class="section" id="entanglement">
-<h2>Entanglement<a class="headerlink" href="#entanglement" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>Entanglement<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>We’ve previously talked about entangelement in a general sense in ‘Spooky Action at a Distance”. Entangled particles <em>know</em> each other’s properties, even when separted by large distance (such as entire galaxies!). IF you take two entangled coins, put one of them on a rocketship at take it all the way out to Pluto, it will make no difference. If you spin the coin on Earth and have it come up “tails”, the coin on Pluto will always come up “heads”. Entangled particles use the spookiness of quantum mechanics to make it seem like they <em>know</em> each others’ secrets. It’s very spooky!</p>
 <p>We’ve seen that if we have one qubit, we can represent its ‘state’ as <span class="math notranslate nohighlight">\(|0\rangle\)</span> or <span class="math notranslate nohighlight">\(|1\rangle\)</span>. But what happens when there are <em>two</em> qubits? There are now a total of 4 choices for the state of this <em>joint</em> system consisting of both qubits!
 <br>
@@ -346,6 +404,8 @@ Or, both qubits can be in the <span class="math notranslate nohighlight">\(|1\ra
 </ul>
 <p>In the first case, the measurements will be <em>correlated</em>. In the second, they will be <em>uncorrelated</em>.
 Take a second to think about this, and feel free to ask for help if you need it. Make sure you understand what is going on before moving on to the next activity.</p>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -375,7 +435,7 @@ Take a second to think about this, and feel free to ask for help if you need it.
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../Day2/QuantumCircuits.html" title="previous page">Quantum Circuits</a>
-    <a class='right-next' id="next-link" href="../ibmq/first.html" title="next page">Quantum Gates on IBMQ</a>
+    <a class='right-next' id="next-link" href="ent2.html" title="next page">Entanglement Activity</a>
 
         </div>
         
@@ -385,7 +445,7 @@ Take a second to think about this, and feel free to ask for help if you need it.
     <div class="container">
       <p>
         
-          By Ana Ciocoiu<br/>
+          By Ana Ciocoiu, Haris Amiri, Alex May, Niloofar Zarifi<br/>
         
             &copy; Copyright 2020.<br/>
       </p>

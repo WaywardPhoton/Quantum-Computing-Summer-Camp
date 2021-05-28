@@ -1,5 +1,5 @@
 
-# Today's Topic
+# Entanglement
 Yesterday was all about the basic chunk of quantum information, called a qubit. We learned about how quantum computers do things to qubits using quantum gates, like the X, Z, and H gate from the Scratch activity. 
 
 Today will be all about what happens when there are two qubits. 
@@ -36,3 +36,15 @@ Take a second to think about this, and feel free to ask for help if you need it.
 
 
 
+
+
+
+```{toctree}
+:hidden:
+:titlesonly:
+
+
+ent2
+Challenges
+teleportation
+```

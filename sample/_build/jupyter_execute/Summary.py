@@ -34,7 +34,7 @@ Make sure you have an email address you can use before camp starts tomorrow!
 
 Towards the end of the week, you'll create a fun pitch for a "Dragons Den" type show. The judges will consist of your camp leaders plus a special mystery guest - the mystery guest will be a quantum scientist or someone working for a quantum computing company, like Microsoft or D-Wave. We'll be helping you create a pitch over the course of the week.
 
-![](images/dd.png "Dragon's Den")
+![](dd.png "Dragon's Den")
 
 
 After the pitch, you'll receive your **quantum engineering certificate**. 
@@ -48,5 +48,7 @@ After the pitch, you'll receive your **quantum engineering certificate**.
 Day1/Day1
 Day2/Day2
 Day3/entanglement
+Day4/intro
+Day5/Project
 ibmq/first
 ```

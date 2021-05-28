@@ -23,6 +23,20 @@
     - file: Day2/QuantumCircuits
     
 - file: Day3/entanglement
+  sections:
+    - file: Day3/ent2
+    - file: Day3/Challenges
+    - file: Day3/teleportation
+
+- file: Day4/intro
+  sections:
+    - file: Day4/SuperpositionAgain
+    - file: Day4/pickle
+    - file: Day4/exploring
+    - file: Day4/ProjectIdeas
+    - file: Day4/Project    
+
+- file: Day5/Project
 
 - file: ibmq/first
   sections: 

@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joey Goes to Mars &#8212; Geering up QC Summer Camp</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Quantum Algorithms" href="../Day4/intro.html" />
+    <link rel="prev" title="Circuit Challenges" href="Challenges.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Geering up QC Summer Camp</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Summary.html">
+   Welcome to Camp!
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day1/Day1.html">
+   Weirdness into Awesomeness
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Bits.html">
+     The information age
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Qbits.html">
+     Quantum Bits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/DblSlit.html">
+     The Double Slit Experiment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Superposition.html">
+     Superposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/SpkyDst.html">
+     Spooky Action at a Distance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QObj.html">
+     Quantum Objects in Real Life
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QNav.html">
+     Quantum Navigator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/WhyQC.html">
+     Why Quantum Computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Scratch.html">
+     Coding with Scratch!
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day2/Day2.html">
+   Introducing Quantum Information
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Donut.html">
+     Superposition With Donuts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Spin.html">
+     What is Spin?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Sup_Vectors.html">
+     Superposition Vectors (High School Content)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/SternGerlach.html">
+     Stern-Gerlach Simulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/QuantumCircuits.html">
+     Quantum Circuits
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="entanglement.html">
+   Entanglement
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ent2.html">
+     Entanglement Activity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Challenges.html">
+     Circuit Challenges
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Joey Goes to Mars
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day4/intro.html">
+   Quantum Algorithms
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day4/SuperpositionAgain.html">
+     Superposition Again
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day4/pickle.html">
+     A Pickle Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day4/exploring.html">
+     Exploring Further
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day4/ProjectIdeas.html">
+     Ideas
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Day5/Project.html">
+   Project Day
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../ibmq/first.html">
+   Quantum Gates on IBMQ
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/MathToolkit.html">
+     Representing Qubits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/Intro.html">
+     Quantum Circuits on IBMQ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/SuperDenseCoding.html">
+     Superdense Coding Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/oracles.html">
+     Quantum Oracles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/grovercode.html">
+     Grover Search Code
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Day3/teleportation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay3/teleportation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controlled-gates">
+   Controlled Gates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fixing-the-circuit">
+   Fixing the Circuit
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="joey-goes-to-mars">
+<h1>Joey Goes to Mars<a class="headerlink" href="#joey-goes-to-mars" title="Permalink to this headline">¶</a></h1>
+<p><img alt="" src="../_images/joeyagain.jpg" /></p>
+<br>
+The year is 2101, and humans and otters, working together, have created a second home on Mars! Joey the otter lives on Earth and would like to go visit Bob, who lives on Mars. 
+<p>Alice is also friends with Joey and Bob, and decides she’ll help Joey get to Mars. The trick is that otters are afraid of spaceships, so they will have to find a different way to get Joey to Mars.</p>
+<p><img alt="" src="../_images/situation.PNG" /></p>
+<p>To get to Mars, Alice and Joey first send one of the qubits from a Bell state to Mars, so that there are entangled particles spread between the two planets.</p>
+<p>Next, we’ll see how Alice, Joey, and Bob can team up to get Joey to Mars.</p>
+<p>We’ll first of all need to turn Joey into a qubit. This is just for fun (you can’t really turn a creature into a qubit), but we’ll say just Joey has this special power.</p>
+<p><img alt="" src="../_images/qubitizer.PNG" /></p>
+<p>Joey is now recorded as the state of the qubit. He might be the up, down, left or right states we’ve learned about. For Joey to safely reach Mars, we need to make sure the correct “Joey” state ends up at Mars.</p>
+<p>The first step to teleport the Joey state to Mars is for Alice to measure both her half of the entangled Bell state, and the qubit Joey is recorded into.</p>
+<p><img alt="" src="../_images/teleport1.PNG" /></p>
+<br>
+<p>Alice will get some measurement outcomes, which are just classical bits like 0 and 1.</p>
+<p>After Alice does this measurement, the qubit over on Mars will be in one of the states up, down, left, right. It might not be the same as the Joey state though! We’ll need to fix it up.</p>
+<p>We can fix up the qubit on Mars by using Alices measurement outcomes. So, Alice sends her bits over to Bob.</p>
+<p><img alt="" src="../_images/teleport2.PNG" /></p>
+<br>
+<p>Finally, Bob has to use Alices bits to do the fixing up. If he does it right, joey will be on Mars. If not… who knows what fate could befall Joey!</p>
+<p>Our goal in the next few sections will be to understand how Bob can fix up his qubit, so that Joey is successfully transported to Mars.</p>
+<p><img alt="" src="../_images/measure.PNG" /></p>
+<p>When Alice measures the two qubits, the two bits she gets out are,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vert00\rangle\)</span> with 25% chance</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vert01\rangle\)</span> with 25% chance</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vert10\rangle\)</span> with 25% chance</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vert11\rangle\)</span> with 25% chance</p></li>
+</ul>
+<p>Because of the randomness in outcomes, some fixing up of the qubit that Bob has is necessary. This is because for each state Alice can measure, Bob’s qubit will be in a different state as well.
+The only case that requires no fixing up is if the <span class="math notranslate nohighlight">\(\vert00\rangle\)</span> state is measured – this means that Bob’s state has the correct transmitted value.</p>
+<p>Otherwise, Bob’s state (the Joey state) can be corrected to match what Alice wanted to send using X and Z gates. For each different outcome,Bob will have to apply different gates to his half of the entangled pair of qubits to fix up the Joey state so that it matches what Alice wanted to send.</p>
+<p>How do we know what we need to do to fix the state? Think of the number of 1s in Alice’s measured state as an indicator for how many mistakes there are in Bob’s state. The number of 1s will indicate how many X and Z gates we need to apply. A single 1 means we need either an X or a Z gate (depending on whether the state is <span class="math notranslate nohighlight">\(\vert01\rangle\)</span> or <span class="math notranslate nohighlight">\(\vert10\rangle\)</span>). Two ones, like in <span class="math notranslate nohighlight">\(\vert11\rangle\)</span> will mean that we need both an X and a Z gate.</p>
+<p>Here is an almost working teleporter:</p>
+<p><img alt="" src="../_images/teleporter.PNG" /></p>
+<p>You can see that Joey first of all turns into a qubit (using the Qubit-izer), and then the Joey qubit and one other qubit get measured. Some classical bits come out. Then, when the last qubit tries to turn back into Joey, something goes (horrifically) wrong!</p>
+<p><img alt="" src="../_images/fail.PNG" /></p>
+<p>If we understand the right gates to put at the end though, we can fix this.</p>
+<div class="section" id="controlled-gates">
+<h2>Controlled Gates<a class="headerlink" href="#controlled-gates" title="Permalink to this headline">¶</a></h2>
+<p>To do the fixing up, Bob will have to use what are called classically controlled gates. Classically controlled gates are when you either do or don’t do a quantum gate based on a classical bit.</p>
+<p>For example, suppose we have two bits, <em>A</em> and <em>B</em>. Then to do a controlled X gate, apply X to the <em>A</em> qubit when <em>B</em> is 1, and don’t do anything when <em>B</em> is 0.</p>
+<p>You can test out some controlled gates using the <a class="reference external" href="https://scratch.mit.edu/projects/405530938/">Scratch circuit simulator</a>. You can see how the controlled gate works in the image below. The control qubit is labeled B and the target qubit is labeled A. Take some time to familiarize yourself with the circuit symbol for a controlled gate.</p>
+<p><img alt="" src="../_images/CNOT.png" /></p>
+<br>
+<ol class="simple">
+<li><p>Set up the Scratch project at the link above so that the circuit applies a classically controlled X gate. What gate should you apply to the top qubit in order to flip the bottom qubit?</p></li>
+</ol>
+<ul class="simple">
+<li><p>Z gate</p></li>
+<li><p>X Gate</p></li>
+<li><p>H gate</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>An X gate: this is because both qubits will start off in the up or <span class="math notranslate nohighlight">\(\vert0\rangle\)</span> state. An X gate on the top qubit will put it in the <span class="math notranslate nohighlight">\(\vert1\rangle\)</span> state, which means that it can cause the second qubit to flip if we add a controlled-X gate(since it is the control qubit for the controlled-X gate).</p>
+</div>
+<ol class="simple">
+<li><p>Try to set-up the Scratch circuit so that the circuit does an X gate to the bottom qubit 50% of the time, and does nothing the other 50% of the time.</p></li>
+</ol>
+<p>To do this, you should:</p>
+<ul class="simple">
+<li><p>Do a Z gate to the top qubit, and a controlled X to the bottom qubit.</p></li>
+<li><p>Do an H gate to the top qubit, and a controlled X to the bottom qubit.</p></li>
+<li><p>Do a Z gate to the top qubit, and a controlled Z gate to the bottom qubit.</p></li>
+<li><p>Do an H gate to the top qubit, and a controlled Z to the bottom qubit.</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>An H gate will cause the top (control) qubit to be in a superposition of 0 and 1, <span class="math notranslate nohighlight">\(\vert0\rangle+\vert\1\rangle\)</span>. Since the control qubit’s state is uncertain, upon application of a controlled-X gate, there will be uncertainty in whether the target affects the control qubit. In fact, there is a 50% chance that the control qubit, <em>when measured</em>, will have flipped.</p>
+</div>
+</div>
+<div class="section" id="fixing-the-circuit">
+<h2>Fixing the Circuit<a class="headerlink" href="#fixing-the-circuit" title="Permalink to this headline">¶</a></h2>
+<p>Remember that Bob needs to do some controlled gates using Alices qubits so that Joey can safely arrive on Mars.</p>
+<p>Your job, as a quantum engineer, is to build the fixer-upper! You can build it in this circuit <a class="reference external" href="https://scratch.mit.edu/projects/416449761/">simulator</a>.</p>
+<p>When you’ve built the fixer-upper, it should let Joey arrive safely on Mars three times in a row.</p>
+<p>Let’s take a look at one example. Suppose we teleport the up state, we get the measurement outcome <span class="math notranslate nohighlight">\(\vert01\rangle\)</span></p>
+<p>What gate should we add to correct it?</p>
+<ul class="simple">
+<li><p>X on the first wire</p></li>
+<li><p>X on the second wire</p></li>
+<li><p>Z on the first wire</p></li>
+<li><p>Z on the second wire</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>We will need an X on the second wire.</p>
+<p>Because the measured state has a single 1, we know that we need either an X or a Z gate on the second or first wires. The way to figure out which wire is really through trial and error in the simulation. This corresponds to the second wire.</p>
+</div>
+<p>To make the circuit work for all cases, we will need to apply the controlled-X and controlled-Z gates on the appropriate wires. Take some time to figure out which gate should go where, and check that your circuit runs correctly!</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Challenges.html" title="previous page">Circuit Challenges</a>
+    <a class='right-next' id="next-link" href="../Day4/intro.html" title="next page">Quantum Algorithms</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ana Ciocoiu, Haris Amiri, Alex May, Niloofar Zarifi<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

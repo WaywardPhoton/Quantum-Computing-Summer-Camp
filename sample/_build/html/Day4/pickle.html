@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Pickle Problem &#8212; Geering up QC Summer Camp</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exploring Further" href="exploring.html" />
+    <link rel="prev" title="Superposition Again" href="SuperpositionAgain.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Geering up QC Summer Camp</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Summary.html">
+   Welcome to Camp!
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day1/Day1.html">
+   Weirdness into Awesomeness
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Bits.html">
+     The information age
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Qbits.html">
+     Quantum Bits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/DblSlit.html">
+     The Double Slit Experiment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Superposition.html">
+     Superposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/SpkyDst.html">
+     Spooky Action at a Distance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QObj.html">
+     Quantum Objects in Real Life
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QNav.html">
+     Quantum Navigator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/WhyQC.html">
+     Why Quantum Computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Scratch.html">
+     Coding with Scratch!
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day2/Day2.html">
+   Introducing Quantum Information
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Donut.html">
+     Superposition With Donuts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Spin.html">
+     What is Spin?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Sup_Vectors.html">
+     Superposition Vectors (High School Content)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/SternGerlach.html">
+     Stern-Gerlach Simulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/QuantumCircuits.html">
+     Quantum Circuits
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day3/entanglement.html">
+   Entanglement
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day3/ent2.html">
+     Entanglement Activity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day3/Challenges.html">
+     Circuit Challenges
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day3/teleportation.html">
+     Joey Goes to Mars
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="intro.html">
+   Quantum Algorithms
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="SuperpositionAgain.html">
+     Superposition Again
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     A Pickle Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exploring.html">
+     Exploring Further
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ProjectIdeas.html">
+     Ideas
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Day5/Project.html">
+   Project Day
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../ibmq/first.html">
+   Quantum Gates on IBMQ
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/MathToolkit.html">
+     Representing Qubits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/Intro.html">
+     Quantum Circuits on IBMQ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/SuperDenseCoding.html">
+     Superdense Coding Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/oracles.html">
+     Quantum Oracles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/grovercode.html">
+     Grover Search Code
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Day4/pickle.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay4/pickle.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-parallelism">
+   Quantum Parallelism
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concept-check">
+   Concept Check
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coding">
+   Coding!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wrap-up">
+   Wrap-Up
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="a-pickle-problem">
+<h1>A Pickle Problem<a class="headerlink" href="#a-pickle-problem" title="Permalink to this headline">¶</a></h1>
+<p>We’re going to explore quantum algorithms in this section.</p>
+<p>Joey is visiting their friend Bob on Mars, when another, mysterious character appears! It’s Joey-Fresh,</p>
+<p><img alt="" src="../_images/joeyfresh.PNG" /></p>
+<br>
+<p>Joey-Fresh gives Joey two boxes,</p>
+<p><img alt="" src="../_images/boxes.PNG" />
+<br></p>
+<p>Joey-Fresh tells Joey the boxes both have pickles in them, but doesn’t say which kind - are they amazing Delux brand pickles, or regular old Blah brand?</p>
+<p><img alt="" src="../_images/pickle.PNG" />
+<br></p>
+<p>Joey decides to keep one pickle for themselves, and give one to Bob, but wants to make sure both pickles are the same type before they do this - otherwise they might give themselves the Delux, and Bob the Blah! (how rude!).</p>
+<p>How can Joey check if the pickles are the same?</p>
+<p>Joey will try to check if the pickles are the same brand using a computer. As we will see, this will let them check using just one step! Joey begins by placing pickle boxes inside their quantum computer:</p>
+<p><img alt="" src="../_images/computer.PNG" /></p>
+<br>
+<p>Joey’s computer will now implement a special gate, which we will call the “D” gate. You will write the code yourself to get the DGate working. To do this, go into the <a class="reference external" href="https://scratch.mit.edu/projects/414238323/">Scratch project</a>.</p>
+<p>Look under the “Qubit” sprite and check out its code. Then look for the code where the DGate is defined, which looks like this:</p>
+<p><img alt="" src="../_images/DG.PNG" /></p>
+<br>
+<p>Try to make the “D” gate do the following to the up and down states,</p>
+<ul class="simple">
+<li><p>If pickle 1 is Delux, and we give the quantum computer the <span class="math notranslate nohighlight">\(\uparrow\)</span> state, then we get back - <span class="math notranslate nohighlight">\(\uparrow\)</span>.</p></li>
+<li><p>If pickle 2 is Delux, and we give the quantum computer the <span class="math notranslate nohighlight">\(\downarrow\)</span> state, then we get back - <span class="math notranslate nohighlight">\(\downarrow\)</span>.</p></li>
+</ul>
+<p>Otherwise the computer doesn’t change anything.</p>
+<hr class="docutils" />
+<p>Let’s first of all think of how a classical computer might check if the pickles are the same or different. Remember that classical bits can only have two states, which could be up or down. If we make sure to only let our qubit be in the up or down states, we are really just using a classical computer.</p>
+<p>So, with our DGate working, lets send in an up state, and watch what happens to the state as it goes through the DGate:</p>
+<p><img alt="" src="../_images/-up.png" />
+<br></p>
+<p>We know that, if Pickle 1 is Delux, we will get -up.</p>
+<p>Then, we send in a down state, and watch what happens as it goes through the DGate:</p>
+<p><img alt="" src="../_images/-down.png" />
+<br></p>
+<p>We note that if Pickle 2 is Delux we will get -down.</p>
+<p>Then, we know that</p>
+<ul class="simple">
+<li><p>If we got plus both times both qubits are Blah brand, and so the same.</p></li>
+<li><p>If we got minus both times both qubits are Delux, and so the same.</p></li>
+<li><p>If we got minus only one time, only one qubit is Delux, so they are different.</p></li>
+</ul>
+<div class="section" id="quantum-parallelism">
+<h2>Quantum Parallelism<a class="headerlink" href="#quantum-parallelism" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s think about how this works using a quantum computer. We can actually check if the pickles are the same or different now, using a trick called “quantum parallelism”. Here’s the idea.</p>
+<p>Sending in up let us check the brand of Pickle 1. Sending in down let us check the brand of Pickle 2. We can learn something about both Pickles at the same time by sending in <span class="math notranslate nohighlight">\(\rightarrow\)</span>, the superposition of <span class="math notranslate nohighlight">\(\uparrow\)</span> and <span class="math notranslate nohighlight">\(\downarrow\)</span>.</p>
+<p>This idea, of sending in superpositions of several different things we’d like to know about, is called quantum parallelism. In the questions below you’ll explore what the DGate does to the right state. You’ll need to remember what you learned earlier today about how gates work together with superposition:</p>
+<p>DGate( <span class="math notranslate nohighlight">\(\rightarrow\)</span> ) = DGate( <span class="math notranslate nohighlight">\(\uparrow\)</span> + <span class="math notranslate nohighlight">\(\downarrow\)</span> ) = DGate( <span class="math notranslate nohighlight">\(\uparrow\)</span> ) + DGate( <span class="math notranslate nohighlight">\(\downarrow\)</span> )</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="concept-check">
+<h2>Concept Check<a class="headerlink" href="#concept-check" title="Permalink to this headline">¶</a></h2>
+<p>Use the following image to help you answer the questions.</p>
+<p><img alt="" src="../_images/DGate.png" />
+<br></p>
+<ol class="simple">
+<li><p>Assume that both pickles are Blah brand. Then what does the DGate do to the right state?</p></li>
+</ol>
+<div class="toggle docutils container">
+<p>Nothing!</p>
+</div>
+<ol class="simple">
+<li><p>Suppose that the first pickle is Blah brand, and the second pickle is Delux brand. Then what does the DGate do to the right state?</p></li>
+</ol>
+<ul class="simple">
+<li><p>Leaves it as the right state</p></li>
+<li><p>Turns it into the left state</p></li>
+<li><p>Turns it into the up state</p></li>
+<li><p>Turns it into the down state</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>Turns it into the left state.</p>
+</div>
+<ol class="simple">
+<li><p>Suppose that both pickles are Delux brand. Then what does the DGate do to the right state?</p></li>
+</ol>
+<ul class="simple">
+<li><p>Turns it into the -right state</p></li>
+<li><p>Turns it into the left state</p></li>
+<li><p>Turns it into the up state</p></li>
+<li><p>Turns it into the down state</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>Turns it into the -right state</p>
+</div>
+</div>
+<div class="section" id="coding">
+<h2>Coding!<a class="headerlink" href="#coding" title="Permalink to this headline">¶</a></h2>
+<p>By editing your Scratch project, try to have one of your measurement blocks say “same” when the pickles are the same brand, and “different” when they are not.</p>
+<p>That means that, aside from writing the DGate code, you also need to choose which quantum gates to lay down. In the end your circuit should do this:</p>
+<p><img alt="" src="../_images/result.png" />
+<br></p>
+<p>When you’ve completed your circuit, add your project to the camp <a class="reference external" href="https://scratch.mit.edu/studios/27046227/">studio</a>.</p>
+<p>You can also add creative elements to your project! (change the appearance for example).</p>
+</div>
+<div class="section" id="wrap-up">
+<h2>Wrap-Up<a class="headerlink" href="#wrap-up" title="Permalink to this headline">¶</a></h2>
+<p>Congrats, you’ve just built your first algorithm!</p>
+<p>Our quantum solution isn’t really all that much faster than opening both boxes, at least when there are just two boxes. However,  a similar approach solves a harder problem:</p>
+<p>Suppose we have 100 boxes, and that we know for sure that either all the boxes contain the same brand of pickles, or that exactly half of the boxes contain Blah brand and half contain Delux brand. Then a quantum computer can learn which situation we are in using just one step. A classical computer would have to open at least half the boxes before being able to answer with certainty - so the quantum computer is much faster!</p>
+<p>Its important that if we asked a different question, the quantum computer actually isn’t any better at solving the problem than the regular idea of opening all the boxes. For example if we don’t give any guarantee about whats in the boxes, the classical computer is just as fast as the quantum one.</p>
+<p>This is a general feature in quantum computing. Quantum computers are not better at all kinds of problems - they’re only better at certain problems! Of course, some of these problems are quite important ones, and that means quantum computers will have a big impact. In the next section we’ll learn about a few different problems where quantum approaches are useful.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="SuperpositionAgain.html" title="previous page">Superposition Again</a>
+    <a class='right-next' id="next-link" href="exploring.html" title="next page">Exploring Further</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ana Ciocoiu, Haris Amiri, Alex May, Niloofar Zarifi<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

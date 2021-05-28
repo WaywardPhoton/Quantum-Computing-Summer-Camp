@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Geering up QC Summer Camp
-author: Ana Ciocoiu
+author: Ana Ciocoiu, Haris Amiri, Alex May, Niloofar Zarifi
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
