@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superposition Again &#8212; Geering up QC Summer Camp</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="A Pickle Problem" href="pickle.html" />
+    <link rel="prev" title="Quantum Algorithms" href="intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Geering up QC Summer Camp</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Summary.html">
+   Welcome to Camp!
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day1/Day1.html">
+   Weirdness into Awesomeness
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Bits.html">
+     The information age
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Day1Qbits.html">
+     Quantum Bits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/DblSlit.html">
+     The Double Slit Experiment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Superposition.html">
+     Superposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/SpkyDst.html">
+     Spooky Action at a Distance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QObj.html">
+     Quantum Objects in Real Life
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/QNav.html">
+     Quantum Navigator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/WhyQC.html">
+     Why Quantum Computing?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day1/Scratch.html">
+     Coding with Scratch!
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day2/Day2.html">
+   Introducing Quantum Information
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Donut.html">
+     Superposition With Donuts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Spin.html">
+     What is Spin?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/Sup_Vectors.html">
+     Superposition Vectors (High School Content)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/SternGerlach.html">
+     Stern-Gerlach Simulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day2/QuantumCircuits.html">
+     Quantum Circuits
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Day3/entanglement.html">
+   Entanglement
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day3/ent2.html">
+     Entanglement Activity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day3/Challenges.html">
+     Circuit Challenges
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Day3/teleportation.html">
+     Joey Goes to Mars
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="intro.html">
+   Quantum Algorithms
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Superposition Again
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pickle.html">
+     A Pickle Problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exploring.html">
+     Exploring Further
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ProjectIdeas.html">
+     Ideas
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Day5/Project.html">
+   Project Day
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../ibmq/first.html">
+   Quantum Gates on IBMQ
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/MathToolkit.html">
+     Representing Qubits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/Intro.html">
+     Quantum Circuits on IBMQ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/SuperDenseCoding.html">
+     Superdense Coding Tutorial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/oracles.html">
+     Quantum Oracles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ibmq/grovercode.html">
+     Grover Search Code
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Day4/SuperpositionAgain.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDay4/SuperpositionAgain.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-gates-and-superpositions">
+   Quantum Gates and Superpositions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#challenge-1">
+     Challenge 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distributive-gates">
+     Distributive Gates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-advantage">
+   Quantum Advantage
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="superposition-again">
+<h1>Superposition Again<a class="headerlink" href="#superposition-again" title="Permalink to this headline">¶</a></h1>
+<p>By now you’re getting pretty familiar with the idea of qubits, and of quantum states. Remember that we’ve been considering four states a qubit can be in, up, down, left and right:</p>
+<p><img alt="" src="../_images/New4Directions.png" /></p>
+<p>We’ve also learned a lot about how these states work - how we can <em>measure</em> qubits, <em>entangle</em> them, and apply gates to them. We also talked a little bit about the idea of <em>superposition</em>. Remember that superposition is when one state is made out of other ones. Let’s look at these states, and their notation, again:</p>
+<p><span class="math notranslate nohighlight">\(\uparrow\;=|0\rangle\)</span>
+<br>
+<span class="math notranslate nohighlight">\(\downarrow\;= |1 \rangle\)</span>
+<br>
+<span class="math notranslate nohighlight">\(\leftarrow\; = |0 \rangle + |1 \rangle\)</span>
+<br>
+<span class="math notranslate nohighlight">\(\rightarrow\; = |0 \rangle - |1 \rangle\)</span>
+<br></p>
+<p>Remember that we can also express <span class="math notranslate nohighlight">\(\uparrow\)</span> and <span class="math notranslate nohighlight">\(\downarrow\)</span> in terms of <span class="math notranslate nohighlight">\(\leftarrow\)</span> and <span class="math notranslate nohighlight">\(\rightarrow\)</span> as well:</p>
+<p><span class="math notranslate nohighlight">\(\uparrow\)</span> =  <span class="math notranslate nohighlight">\(\leftarrow\)</span> + <span class="math notranslate nohighlight">\(\rightarrow\)</span>
+<br>
+<span class="math notranslate nohighlight">\(\downarrow\)</span> =  <span class="math notranslate nohighlight">\(\leftarrow\)</span> - <span class="math notranslate nohighlight">\(\rightarrow\)</span></p>
+<p>Today, we’re going to understand how quantum computers use superposition to do certain things faster than any other computer can do it!</p>
+<div class="section" id="quantum-gates-and-superpositions">
+<h2>Quantum Gates and Superpositions<a class="headerlink" href="#quantum-gates-and-superpositions" title="Permalink to this headline">¶</a></h2>
+<p>Remember that quantum gates do things to quantum states.</p>
+<p>For example, an X gate turns an up state into a down state,</p>
+<p>X (<span class="math notranslate nohighlight">\(\uparrow\)</span>) = <span class="math notranslate nohighlight">\(\downarrow\)</span></p>
+<p>In the circuit simulator, you might have noticed that the X gate doesn’t change a right state,</p>
+<p>X (<span class="math notranslate nohighlight">\(\rightarrow\)</span>) = <span class="math notranslate nohighlight">\(\rightarrow\)</span></p>
+<p>When it hits a left state, it does something interesting:</p>
+<p>X (<span class="math notranslate nohighlight">\(\leftarrow\)</span>) = -  <span class="math notranslate nohighlight">\(\leftarrow\)</span></p>
+<p>Notice that there’s a minus sign in front now! Often the minus sign isn’t important, so we haven’t been keeping track of it so far. When it comes to superposition and gates though, the minus sign matters. We’ll explore this in the next section.</p>
+<p>Remember that you can check what each gate does to any state by playing with the one qubit circuit Scratch project. Since you are more advanced quantum engineer now, we’ve given you access to a <a class="reference external" href="https://scratch.mit.edu/projects/412176191/">modified project</a>. that lets you see what superposition of states you’re in.</p>
+<div class="section" id="challenge-1">
+<h3>Challenge 1<a class="headerlink" href="#challenge-1" title="Permalink to this headline">¶</a></h3>
+<p>What does the Z gate do to the up state?</p>
+<ul class="simple">
+<li><p>Nothing!</p></li>
+<li><p>Turns it into “-up”</p></li>
+<li><p>Turns it into the left state</p></li>
+<li><p>Turns it into the down state</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>Nothing!</p>
+</div>
+<p>What does the Z gate do to the “down” state?</p>
+<ul class="simple">
+<li><p>Nothing!</p></li>
+<li><p>Turns it into the “-down” state</p></li>
+<li><p>Turns it into the left state</p></li>
+<li><p>Turns it into the right state</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>Turns it into the “-down” state</p>
+</div>
+<p>What does the H gate do to the down state?</p>
+<ul class="simple">
+<li><p>Nothing!</p></li>
+<li><p>Turns it into the left state</p></li>
+<li><p>Turns it into the up state</p></li>
+</ul>
+<div class="toggle docutils container">
+<p>Turns it into the left state</p>
+</div>
+</div>
+<div class="section" id="distributive-gates">
+<h3>Distributive Gates<a class="headerlink" href="#distributive-gates" title="Permalink to this headline">¶</a></h3>
+<p>Do you remember how multiplying numbers works when there are brackets? For example, what’s the answer to</p>
+<p>3 x (2 + 1) = ?</p>
+<p>9, right? But there are actually two ways to do this. One way is you could add first,</p>
+<p>3 x (2+1) = 3 x 3 = 9</p>
+<p>But the other way is to multiply first! If you multiply first though you have to be careful,</p>
+<p>3 x (2 + 1) = (3 x 2) + (3 x 1) = 6 + 3 = 9</p>
+<p>The “3” multiplies into each number that we are adding together.
+Staff Debug Info</p>
+<p>The rule for gates and superposition is that the gate goes into each part of the superposition, just like when we multiply numbers we have to multiply each number thats being added together.</p>
+<p>Let’s see this in action:</p>
+<p>X( <span class="math notranslate nohighlight">\(\uparrow\)</span> + <span class="math notranslate nohighlight">\(\downarrow\)</span> ) = X( <span class="math notranslate nohighlight">\(\uparrow\)</span> ) + X( <span class="math notranslate nohighlight">\(\downarrow\)</span> )</p>
+<p>If we’d like we can keep going, and write out what X( <span class="math notranslate nohighlight">\(\uparrow\)</span> ) and X( <span class="math notranslate nohighlight">\(\downarrow\)</span> ) gives:</p>
+<p>X( <span class="math notranslate nohighlight">\(\uparrow\)</span> ) + X( <span class="math notranslate nohighlight">\(\downarrow\)</span> ) = <span class="math notranslate nohighlight">\(\downarrow\)</span> + <span class="math notranslate nohighlight">\(\uparrow\)</span></p>
+<p>Remember that <span class="math notranslate nohighlight">\(\rightarrow\)</span> = <span class="math notranslate nohighlight">\(\uparrow\)</span> + <span class="math notranslate nohighlight">\(\downarrow\)</span>, so this also says that X ( <span class="math notranslate nohighlight">\(\rightarrow\)</span> ) = <span class="math notranslate nohighlight">\(\rightarrow\)</span></p>
+<p>You can also watch this be explained in the <a class="reference external" href="https://youtu.be/ZQl5u0iyXg8">video</a>.</p>
+</div>
+</div>
+<div class="section" id="quantum-advantage">
+<h2>Quantum Advantage<a class="headerlink" href="#quantum-advantage" title="Permalink to this headline">¶</a></h2>
+<p>So how does superposition benefit a quantum computer?</p>
+<p>To look at this in a qualitative way let’s look at sound waves and noise cancellation. The way your noise cancelling headphone work is by using the principle of superposition in a classical way. Let’s say you have an incoming sound wave that has the a noise signal on top of it. Interference is used reduce the amplitude of unwanted noise: your headphone will generate a tone of approximately the same frequency and amplitude, but out of phase by a value of <span class="math notranslate nohighlight">\(\pi\)</span> or 180 degrees:</p>
+<p><img alt="" src="../_images/noise.png" /></p>
+<p>As you can see above, the <em>superposition</em> of the noise signal with the generated signal will result in <em>interference</em>, which reduce the amplitude of the incoming noise signal. The noise signal does not dissapear entirely because the amplitude and phase of the generated signal is not a perfect match: but it does the job well enough.</p>
+<p>A quantum computer works much the same way. At the start of most algorithms, all the qubits are put into superpositions using H gates. These superpositions will representa all possible computation states. These states are them fed into a quantum circuit that selectively interferes the components of the superposition according the algorithm’s design. The magic of the algorithm is that it will interact all the superposition states so that What remains after cancelling the  amplitudes and phases of the input state is the solution to the computation!</p>
+<br>
+<p><img alt="" src="../_images/flow.png" /></p>
+<br>
+<p>Entangled states are also very useful in quantum computing. Entangled states, as we have seen, have the unique property where the combined state of the qubits contains more information than the qubits do individually. Many qubits can be entangled, and these states can be used for quantum teleportation (which we’ve explored), where an entangled state is used to transfer information from one qubit to another regardless of physical distance.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Day4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Quantum Algorithms</a>
+    <a class='right-next' id="next-link" href="pickle.html" title="next page">A Pickle Problem</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ana Ciocoiu, Haris Amiri, Alex May, Niloofar Zarifi<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
